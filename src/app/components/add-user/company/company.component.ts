@@ -41,6 +41,7 @@ export class CompanyComponent implements OnInit {
   ROCE: any;
   EVEBITDA: any;
   ROE: any;
+  TAKEAWAYONROCE:any;
   TAKEAWAYONROE: any;
   TAKEAWAYONEVEBITDA: any;
   PERATIO: any;
@@ -107,6 +108,11 @@ export class CompanyComponent implements OnInit {
   salesinZERO: any;
   OVERVIEWONfourQS: any;
   HOLDINGBYFIIINMINESTWO: any;
+  OperatingProfitinzero: any;
+  OperatingProfitinMINESone: any;
+  ReturnonEquityForoneYear: any;
+  ReturnonEquityFortwoYears: any;
+  ReturnonEquityForthreeYears: any;
   constructor( 
     private Activatedroute: ActivatedRoute,
     public crudService: CrudService,
@@ -144,8 +150,8 @@ export class CompanyComponent implements OnInit {
     this.Activatedroute.queryParamMap
     .subscribe(params => {
       this.companyName = params.get('q')||0;
-      console.log('Query params', this.companyName)
-      console.log(this.snapshotPageNo)
+     /* console.log('Query params', this.companyName)
+      console.log(this.snapshotPageNo) */
       /*
       for(c = 2; c <= this.JsonData.length; c++){
         if(this.snapshotPageNo == this.JsonData.jsonData[2].NameoftheCompnay){
@@ -251,19 +257,26 @@ export class CompanyComponent implements OnInit {
          this.SalesinMINESTWO = JSON.parse(JSON.stringify(data)).jsonData[this.i].SalesinMINESTWO,
          this.EPSINMINESTWO = JSON.parse(JSON.stringify(data)).jsonData[this.i].EPSINMINESTWO,
          this.OperatingProfitinMINESTWO = JSON.parse(JSON.stringify(data)).jsonData[this.i].OperatingProfitinMINESTWO,
+         this.OperatingProfitinMINESone = JSON.parse(JSON.stringify(data)).jsonData[this.i].OperatingProfitinMINESone,
+         this.OperatingProfitinzero = JSON.parse(JSON.stringify(data)).jsonData[this.i].OperatingProfitinzero,
          this.salesinMINESONE = JSON.parse(JSON.stringify(data)).jsonData[this.i].salesinMINESONE,
          this.EPSINMINESONE = JSON.parse(JSON.stringify(data)).jsonData[this.i].EPSINMINESONE,
          this.salesinZERO = JSON.parse(JSON.stringify(data)).jsonData[this.i].salesinZERO,
          this.EPSINZERO = JSON.parse(JSON.stringify(data)).jsonData[this.i].EPSINZERO,
          this.OVERVIEWONfourQS = JSON.parse(JSON.stringify(data)).jsonData[this.i].OVERVIEWONfourQS,
-         this.HOLDINGBYFIIINMINESTWO = JSON.parse(JSON.stringify(data)).jsonData[this.i].HOLDINGBYFIIINMINESTWO
+         this.HOLDINGBYFIIINMINESTWO = JSON.parse(JSON.stringify(data)).jsonData[this.i].HOLDINGBYFIIINMINESTWO,
+         this.TAKEAWAYONROCE = JSON.parse(JSON.stringify(data)).jsonData[this.i].TAKEAWAYONROCE,
+         this.ReturnonEquityForoneYear = JSON.parse(JSON.stringify(data)).jsonData[this.i].ReturnonEquityForoneYear,
+         this.ReturnonEquityFortwoYears = JSON.parse(JSON.stringify(data)).jsonData[this.i].ReturnonEquityFortwoYears,
+         this.ReturnonEquityForthreeYears = JSON.parse(JSON.stringify(data)).jsonData[this.i].ReturnonEquityForthreeYears
+
         }
         
       }
-      console.log(JSON.parse(JSON.stringify(data)).jsonData[0].NameoftheCompnay)
+     /* console.log(JSON.parse(JSON.stringify(data)).jsonData[0].NameoftheCompnay)
       console.log(JSON.parse(JSON.stringify(data)).jsonData)
       console.log(JSON.parse(JSON.stringify(data)))
-      console.log(this.JsonData.jsonData[2])
+      console.log(this.JsonData.jsonData[2])*/
       
       
 

@@ -10,7 +10,11 @@ import { CrudService } from "../../shared/crud.service";
 })
 
 export class AddUserComponent implements OnInit {
-  sorry!: Boolean;
+  sorrys:boolean = false;
+  back:boolean=false;
+  reflect:any;
+  model:any;
+  sorry: Boolean = false;
   acc = [120, 240];
   i!: any;
   pageNum=0;
@@ -37,8 +41,17 @@ export class AddUserComponent implements OnInit {
 
   }
 
-  showing(){
-   this.sorry = true;
+  showing(event: any){
+    
+    if(event){
+      this.sorry = true;
+    }
+      else{
+        this.sorry = false;
+      }
+    
+  
+   
   }
   onKeyPress(){
     this.count = this.count + 1;
@@ -59,20 +72,49 @@ export class AddUserComponent implements OnInit {
       this.dis = true;
     }
 
+    detect(event: any): void{
+      if(event.target.value.length > 2){
+        this.back = true;
+        this.sorrys =true;
+      }
+      else {
+        this.sorry = false;
+        this.back = false;
+        this.sorrys = false;
+      }
+      /*console.log(event.target.value.length)*/
+    }
+
     search(localRef: HTMLInputElement){
-       
-      this.tou = true;
+     
+     /* console.log(localRef.eventListeners)
+       console.log(localRef)
+       console.log(localRef.value.length)*/
+       if(localRef.value.length > 1) {
+         this.tou = true;
+       }
     }
 
     arr(value: any){
       this.i = value ;
-      console.log(this.i)
+     /* console.log(this.i) */
     }
   addUser(data:any) {
 
    
     this.crudService.addUser(this.userObj).subscribe((data: {}) => {
       this.JsonData = JSON.parse(JSON.stringify(data)).jsonData;
+     /*
+        if(this.filterTerm != this.JsonData[this.i].NameoftheCompnay ){
+          this.sorry = false;
+        }
+        else
+        {
+          this.sorry = false;
+        } 
+        */
+      
+      
      
      /* for(this.i=0; this.i<=this.JsonData.length; this.i++){
         if(this.JsonData[this.i].NameoftheCompnay){

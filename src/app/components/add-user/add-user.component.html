@@ -1,77 +1,127 @@
-
-<div class="container" style="max-width: 500px; margin-top: 120px;">
-  <h3 class="mb-3 mt-5 text-center"> </h3>
-<img src="../../../assets/WhatsApp Image 2021-08-02 at 18.11.04.jpeg" alt="" style="height: 200px; width: 200px;margin-left: 25%;">
-<br><br>
-  <div >
-   
-    <input 
-    (keyup.enter)="showing()"
-    type="submit"
-    value="submit"
+<!--ng-keydown="count = count + 1"   (change)    
     (ngsubmit)="showing()"
-    (onSubmit)="showing()"
-    ng-keydown="count = count + 1"
-    ng-init="count=0"
-    #box (keypress)="func($event)" (click)="search(localRef)" type="text" [(ngModel)]="filterTerm"  
-    class="form-control" 
-    placeholder="Please Enter Company Name" #localRef 
-    style="border-width: 3px; border-color: rgb(112, 192, 112);"/>
-    {{this.count}} 
-  </div>
-   
-
-
-
-<table class=" table table-bordered" *ngIf="this.val.length>1 && tou">
-   <!-- <thead>
-      <tr> -->
-        <!--<th scope="col">#Id</th>-->
-        <!-- <th scope="col">Name</th> -->
-        <!--<th scope="col">Email</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Action</th>-->
-       <!--</tr>
-    </thead>-->
-    <tbody>
-      <tr *ngFor="let user of JsonData | filter:filterTerm; let i = index">
+    (onSubmit)="showing()"-->
+    <div class="container" style="max-width: 500px; margin-top: 120px;">
+      <h3 class="mb-3 mt-5 text-center"> </h3>
+    <img src="../../../assets/capital .png" alt="" style="height: 200px; width: 200px;margin-left: 25%;">
+    <br><br>
+      <div >
        
-        <td #reff [routerLink]="['/add/company']"  [queryParams]="{ q: user.NameoftheCompnay}" >
-        <span >  <a [routerLink]="['/add/company']"  [queryParams]="{ q: user.NameoftheCompnay}" style="text-decoration: none;color: black;" href="">{{ user.NameoftheCompnay }} </a></span></td> 
+        <input 
+        (input)="detect($event)"
+        (keyup.enter)="showing($event)"
+        type="submit"
+        value="submit"
+        ng-keydown="search(localRef)"
+        ng-init="count=0"
+        #box 
+        (keypress)="func($event)" 
+        (keypress)="search(localRef)"
+        (click)="search(localRef)" 
+        type="text" 
+        [(ngModel)]="filterTerm"  
+        class="form-control" 
+        placeholder="Please Enter Company Name" 
+        #localRef 
+        style="border-width: 3px;"/>
+        {{this.count}} 
+      </div>
+       
+    
+    
+    
+    <table class=" table table-bordered" *ngIf="back"> <!---->
+       <!-- <thead>
+          <tr> -->
+            <!--<th scope="col">#Id</th>-->
+            <!-- <th scope="col">Name</th> -->
+            <!--<th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th>-->
+           <!--</tr>
+        </thead>-->
+        <tbody> 
+         <div style="
+         text-decoration: none;
+         height:200px;
+         width:480px;
+         overflow:auto;">
+                       <span>
+                        <ul *ngFor="let user of JsonData | filter:filterTerm;  let i = index"  style="list-style-type: none;">
+           
+                          <li 
+                          #reff [routerLink]="['/add/company']"  [queryParams]="{ q: user.NameoftheCompnay}" >
+                          <span>  
+                            <a [routerLink]="['/add/company']"  [queryParams]="{ q: user.NameoftheCompnay}" 
+                            style="text-decoration: none;color: black;" href="">{{ user.NameoftheCompnay }}  </a>
+                          </span>
+                        </li> 
+                              
+                        <!--  <td>
+                            <span class="edit btn-danger btn-sm btn" (click)="delete(user.id)">Delete</span> &nbsp;
+                            <span class="edit btn-success btn-sm btn" routerLink="/edit/{{user.id}}">Edit</span>
+                          </td>-->
+                        </ul></span> 
+    
+                     </div>
+         <!--.slice(0, 5)-->
+            
+          
+            
+         
+         
+     
+    
+     
+    
+        </tbody>
+      </table> 
+     <!--   {{emp}} --> 
+      <!----------------------------------------------------------------->
+    
+    
+     <!-- <div class="form-group">
+        <input type="text" [(ngModel)]="userObj.email" class="form-control" placeholder="Email">
+      </div>
+    
+      <div class="form-group">
+        <input type="text" [(ngModel)]="userObj.phone" class="form-control" placeholder="Phone">
+      </div>-->
+    
+      <div class="form-group">
+      <!--<button class="btn btn-success btn-lg btn-block" (click)="addUser(userObj)"> </button>-->
+      </div>
+    <!----------------------------------------------->
+      <div *ngIf="sorry && sorrys">
+        <h3 style="text-align: center;">we are Sorry!!!</h3>
+        <p style="text-align: center;">No Related company found, Do write us at <a href="">equity@collabcapital.in</a> we will Update. Our next user can enjoy the data.</p>
+      </div>
+    <!------------------------------------------------------------------------>
+    </div>
+    
+    
+    <!--
+      <tbody> 
+          
+       
+         <tr *ngFor="let user of JsonData | filter:filterTerm;  let i = index" >
+           
+          <td 
+          #reff [routerLink]="['/add/company']"  [queryParams]="{ q: user.NameoftheCompnay}" >
+          <span>  
+            <a [routerLink]="['/add/company']"  [queryParams]="{ q: user.NameoftheCompnay}" style="text-decoration: none;color: black;" href="">{{ user.NameoftheCompnay }} </a>
+          </span>
+        </td> 
+              
+      
+     </tr>
+      
         
-          
-          
-          
-      <!--  <td>
-          <span class="edit btn-danger btn-sm btn" (click)="delete(user.id)">Delete</span> &nbsp;
-          <span class="edit btn-success btn-sm btn" routerLink="/edit/{{user.id}}">Edit</span>
-        </td>-->
-   </tr>
- 
-
- 
-
+     
+     
+    
+    
+    
+    
     </tbody>
-  </table> 
- <!--   {{emp}} --> 
-  <!----------------------------------------------------------------->
-
-
- <!-- <div class="form-group">
-    <input type="text" [(ngModel)]="userObj.email" class="form-control" placeholder="Email">
-  </div>
-
-  <div class="form-group">
-    <input type="text" [(ngModel)]="userObj.phone" class="form-control" placeholder="Phone">
-  </div>-->
-
-  <div class="form-group">
-  <!--<button class="btn btn-success btn-lg btn-block" (click)="addUser(userObj)"> </button>-->
-  </div>
-<!----------------------------------------------->
-  <div *ngIf="sorry">
-    <h3 style="text-align: center;">we are Sorry!!!</h3>
-    <p style="text-align: center;">No Related company found, Do write us at <a href="">equity@collabcapital.in</a> we will Update. Our next user can enjoy the data.</p>
-  </div>
-<!------------------------------------------------------------------------>
-</div>
+    -->
