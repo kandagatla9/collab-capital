@@ -1,576 +1,635 @@
 <style type="text/css">
-    .w3-card{
-        
-        box-shadow: 2px 2px 1px 3px rgba(51, 161, 235, 0.12),
-                        0 1px 2px rgba(0, 0, 0, 0.24);;
-        border-radius: 6px;
-        border-color: royalblue;
+    .a:hover {
+       opacity: 0;
     }
-    .column{
-        border-width: 2px;
-        margin: 0 15px 25px;
-                        box-shadow:2px 2px 1px 3px rgba(51, 161, 235, 0.12),
-                        0 1px 2px rgba(0, 0, 0, 0.24);
-                        background: #fff;
-                        border-radius: 16px;
-                        flex-basis:33%;
+    .fa:hover {
+        opacity: 0.7;
     }
-    .card{
-        border-radius: 16px;
-        padding: 15px 25px;
+    .fa {
+      padding: 10px;
+      font-size: 20px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 15px 10px;
     }
-    .body{
-        background: #f7f7f7;
-        font-family: 'Roboto', sans-serif;
-        color: #3e3e3e;
-        padding: 50px 0;
-    }
-    .h2{
-        color: #3696dc;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 2px;
-    }
-
-   
-   
-    .p{
-        text-align: center;
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-</style>
-<!--
-{{nam}}
-<br>
-{{companyName}}
-<br>
-{{NSECODE}}
-
-
-<div *ngFor="let user of JsonData.jsonData">
-    {{ user.BSECODE }}
-</div>-->
-
-
- 
-<div style="background-color: white;">
-<br> 
-<!--
-<div style="height:120px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
-    As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
-    </div>-->
-
-
-<!-------------------------------------------------------------------------------------------------------------------->
-<br><br>
-
-    <div class="" style="height: 100%; background-color: white;"><br>
-        <div class="w3-row " style="margin: 20px; height: 100%;">
-            <div class="w3-col m9" style="flex: auto;">
-                <table class="w3-table">
-                   
-                    <tbody>
-
-                            <tr class="w3-card" style=" border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><h4 style="color: hsl(243, 93%, 67%);">{{companyName}}</h4></tr>
-                         <br>
-                        <tr class="">
-                            <td class="w3-card w3-col m5" style="border: 10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><span style="color: red;">NSECODE</span>: {{NSECODE}}</td>
-                            <td class="w3-col m2"><h1></h1></td>
-                            <td class="w3-card w3-col m5" style="border: 10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><span style="color: red;">BSECODE</span>: {{BSECODE}}</td>
-                        </tr>
-                        <tr><br></tr>
-                        <tr class="w3-card" style="border: 10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><h5 style="color: rgb(83, 80, 80);">ABOUT COMPANY</h5> {{nam}}</tr><br>
-                        <tr class="w3-card" style="border: 10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><h5 style="color: rgb(83, 80, 80);">LAST 6 MONTHS WORK PROFILE</h5>{{LASTSIXMONTHSWORKPROFILE}}</tr><br>
-                    </tbody>
-                </table>
-          
-            </div>
-            <div class="w3-col m1">
-                <h1></h1>
-            </div>
+        .w3-card{
             
-            <div class="w3-col m2" style="flex-basis: 100%; ">
-                <p style="font-size: 12px;">
-                    HOW BUSINESS IS PERFORMAING WHEN COMPARING TO OTHER COMPANIES IN SAME INDUSTRY</p>
-                <div class="w3-card" style="height:300px;
-                width:210px;
-                border:1px solid #ccc;
-                font:16px/26px Georgia, Garamond, Serif;
-                overflow:auto;"><br><br><br>
-                   <span style="text-align: center; margin: 20px;"><h4>{{HOWBUSINESSISPERFORMAINGWHENCOMPARINGTOOTHERCOMPANIESINSAMEINDUSTRY}}</h4></span> 
-                    </div><br>
-
-                <!--<h4 class="w3-card" 
-                style="text-align: center;  
-                flex: auto;  border: 
-                10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid;">
-                  <br><br><br> 
-                  <p style="font-size: 12px;">
-                      HOW BUSINESS IS PERFORMAING WHEN COMPARING TO OTHER COMPANIES IN SAME INDUSTRY</p>
-                   <span>{{HOWBUSINESSISPERFORMAINGWHENCOMPARINGTOOTHERCOMPANIESINSAMEINDUSTRY}}</span><br><br><br><br><br> <br>
-                 </h4>-->
-                
-            </div>
-        </div>
-      
-
-    </div> 
-
-<!------------------------------------------------------------------------------------------------------------------------------->
+            box-shadow: 2px 2px 1px 3px rgba(51, 161, 235, 0.12),
+                            0 1px 2px rgba(0, 0, 0, 0.24);;
+            border-radius: 16px;
+            border-color: royalblue;
+        }
+        .column{
+            border-width: 2px;
+            margin: 0 15px 25px;
+                            box-shadow:2px 2px 1px 3px rgba(51, 161, 235, 0.12),
+                            0 1px 2px rgba(0, 0, 0, 0.24);
+                            background: #fff;
+                            border-radius: 16px;
+                            flex-basis:33%;
+        }
+        .card{
+            border-radius: 16px;
+            padding: 15px 25px;
+        }
+        .body{
+            background: #f7f7f7;
+            font-family: 'Roboto', sans-serif;
+            color: #3e3e3e;
+            padding: 50px 0;
+        }
+        .h2{
+            color: #3696dc;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 2px;
+        }
     
-<br><br>
-    <div class="" style="height: 100%; background-color: white;"><br>
-        <div class=" w3-row" style="margin: 20px;">
-            <div  >
-                <table>
-                    <td class="w3-card" style="border-width: 0px; text-align: center;">
-                        <h6>HOW INDUSTRY IS RUNNING FROM LAST 3 YEARS, & TO BE EXPECTED IN THE NEXT 3 YEARS</h6>
-                        {{HOWINDUSTRYISRUNNINGFROMLASTTHREEYEARSANDTOBEEXPECTEDINTHENEXTTHREEYEARS}}</td>
-                      <td style="width: 10%;" ><h1></h1></td>
-                      <td class="w3-card" style=" text-align: center; border-width: 0px;">
-                        <h6>OVER VIEW OF THE COMPANY AFTER MAKING A IN DEPTH STUDY OF FINNCIAL, SIMILAR COMPANIES & INDUSTRIES</h6>
-                          {{OVERVIEWOFTHECOMPANYAFTERMAKINGAINDEAPTHSTUDYOFFINNCIALSSIMILARCOMPANIESANDIndustries}}</td>
-                </table>
-                
+       
+       
+        .p{
+            text-align: center;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    
+    </style>
+    <!--
+    {{nam}}
+    <br>
+    {{companyName}}
+    <br>
+    {{NSECODE}}
+    
+    
+    <div *ngFor="let user of JsonData.jsonData">
+        {{ user.BSECODE }}
+    </div>-->
+    
+    
+    
+    <div style="background-color: white;">
+    
+    
+    
+        <nav class="navbar navbar-light justify-content-between" 
+        style="position: fixed; width: 100%; background-color: rgb(226, 229, 229);">
+            <a class="navbar-brand"  href="/add"><img src="../../../../assets/capital .png"
+                style="height: 50px; width: 50px; margin-left: 50px;"></a>
+            
+                <div style="margin-right: 80px;">
+              <input 
+              (input)="detect($event)"
+              (keyup.enter)="showing($event)"
+              type="submit"
+              value="submit"
+              ng-keydown="search(localRef)"
+              ng-init="count=0"
+              #box 
+              (keypress)="func($event)" 
+              (keypress)="search(localRef)"
+              (click)="search(localRef)" 
+              type="text" 
+              [(ngModel)]="filterTer"  
+              class="form-control" 
+              placeholder="Please Enter Company" 
+              #localRef 
+              style="border-width: 3px;"/>
+              
             </div>
-        </div><br>
- <!-------------------------------------------------------------------------------------------------------------------->       
-<div class="container" style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">Q1 TAKE AWAYS</h6>
-           <p style="text-align: center;">{{QoneTAKEAWAYS}}</p> 
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">Q2 TAKE AWAYS</h6>
-           <p style="text-align: center;">{{QtwoTAKEAWAYS}}</p> 
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">Q3 TAKE AWAYS</h6>
-           <p style="text-align: center;">{{QthreeTAKEAWAYS}}</p> 
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">Q4 TAKE AWAYS</h6>
-           <p style="text-align: center;">{{QfourTAKEAWAYS}}</p> 
-        </div>
-    </div>
-
-</div>
-
- <!-------------------------------------------------------------------------------------------------------------------->       
-        <!--<div class="w3-row"  style="margin: 20px;">
+              
+          </nav> 
+          <br><br><br>
+          <!------------------------------------------------------------>
+    <table class=" table table-bordered" *ngIf="back" style="margin-left: 80%;background-color: white; position: fixed;"> <!---->
+        <!-- <thead>
+           <tr> -->
+             <!--<th scope="col">#Id</th>-->
+             <!-- <th scope="col">Name</th> -->
+             <!--<th scope="col">Email</th>
+             <th scope="col">Phone</th>
+             <th scope="col">Action</th>-->
+            <!--</tr>
+         </thead>-->
+         <tbody> 
+          <div style="
+          text-decoration: none;
+          height:200px;
+          width:480px;
+          overflow:auto;">
+                        <span>
+                         <ul *ngFor="let user of JsonData | filter:filterTer;  let i = index"  style="list-style-type: none;">
+            
+                           <li 
+                           #reff [routerLink]="['../../add/company']"  
+                           onClick="window.location.reload();" [queryParams]="{ q: user.NameoftheCompnay}" >
+                           <span>  
+                             <a [routerLink]="['../../add/company']"  [queryParams]="{ q: user.NameoftheCompnay}" 
+                             
+                             style="text-decoration: none;color: black;" href="">{{ user.NameoftheCompnay }}  </a>
+                           </span>
+                         </li> 
+                               
+                         <!--  <td>
+                             <span class="edit btn-danger btn-sm btn" (click)="delete(user.id)">Delete</span> &nbsp;
+                             <span class="edit btn-success btn-sm btn" routerLink="/edit/{{user.id}}">Edit</span>
+                           </td>-->
+                         </ul></span> 
+     
+                      </div>
+          <!--.slice(0, 5)-->
+             
            
-                <table class="w3-table" style="table-layout: fixed;">
-                    <tr>
-                        <td class="w3-card" style="text-align: center; border-width: 0px;">
-                           <h6>Q1 TAKE AWAYS</h6> {{QoneTAKEAWAYS}}</td>
-                        <td style="text-align: center; border-width: 0px;">
-                            <h6>Q2 TAKE AWAYS</h6> {{QtwoTAKEAWAYS}}</td>
-                        <td class="w3-card" style="text-align: center; border-width: 0px;">
-                            <h6>Q3 TAKE AWAYS</h6> {{QthreeTAKEAWAYS}}</td>
-                        <td   style="text-align: center; border-width: 0px;">
-                            <h6>Q4 TAKE AWAYS</h6> {{QfourTAKEAWAYS}}</td>
-                        </tr>
-                </table>
+             
+          
+          
+      
+     
+      
+     
+         </tbody>
+       </table>
+     <!-------------------------------------------------------------------->
+    <br> 
+    <!--
+    <div style="height:120px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+        As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
+        </div>-->
+    
+    
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <br><br>
+    
+        <div class="" style="height: 100%; background-color: white;"><br>
+            <div class="w3-row " style="margin: 20px; height: 100%;">
+                <div class="w3-col m9" style="flex: auto;">
+                    <table class="w3-table">
+                       
+                        <tbody>
+    
+                                <tr class="w3-card" style=" border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><h4 style="color: hsl(243, 93%, 67%);">{{companyName}}</h4></tr>
+                             <br>
+                            <tr class="">
+                                <td class="w3-card w3-col m5" style="border: 10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><span style="color: red;">NSECODE</span>: {{NSECODE}}</td>
+                                <td class="w3-col m2"><h1></h1></td>
+                                <td class="w3-card w3-col m5" style="border: 10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><span style="color: red;">BSECODE</span>: {{BSECODE}}</td>
+                            </tr>
+                            <tr><br></tr>
+                            <tr class="w3-card" style="border: 10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><h5 style="color: rgb(83, 80, 80);">ABOUT COMPANY</h5> {{nam}}</tr><br>
+                            <tr class="w3-card" style="border: 10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid; text-align: center;"><h5 style="color: rgb(83, 80, 80);">LAST 6 MONTHS WORK PROFILE</h5>{{LASTSIXMONTHSWORKPROFILE}}</tr><br>
+                        </tbody>
+                    </table>
+              
+                </div>
+                <div class="w3-col m1">
+                    <h1></h1>
+                </div>
+                
+                <div class="w3-col m2" style="flex-basis: 100%; ">
+                    <p style="font-size: 12px;">
+                        </p>
+                    <div class="w3-card" style="height:300px;
+                    width:210px;
+                    border:1px solid #ccc;
+                    font:16px/26px Georgia, Garamond, Serif;
+                    overflow:auto;"><br><br><br>
+                       <span style="text-align: center; margin: 20px;"><h4>{{HOWBUSINESSISPERFORMAINGWHENCOMPARINGTOOTHERCOMPANIESINSAMEINDUSTRY}}</h4></span> 
+                        </div><br>
+    
+                    <!--<h4 class="w3-card" 
+                    style="text-align: center;  
+                    flex: auto;  border: 
+                    10px; border-color: rgb(206, 202, 202); border-width: 0px; border-style: solid;">
+                      <br><br><br> 
+                      <p style="font-size: 12px;">
+                          HOW BUSINESS IS PERFORMAING WHEN COMPARING TO OTHER COMPANIES IN SAME INDUSTRY</p>
+                       <span>{{HOWBUSINESSISPERFORMAINGWHENCOMPARINGTOOTHERCOMPANIESINSAMEINDUSTRY}}</span><br><br><br><br><br> <br>
+                     </h4>-->
+                    
+                </div>
+            </div>
+          
+    
+        </div> 
+    
+    <!------------------------------------------------------------------------------------------------------------------------------->
+        
+    <br><br>
+        <div class="" style="height: 100%; background-color: white;"><br>
+            <div class=" w3-row" style="margin: 20px;">
+                <div  >
+                    <table>
+                        <td class="w3-card" style="border-width: 0px; text-align: center;">
+                            <h6></h6>
+                            {{HOWINDUSTRYISRUNNINGFROMLASTTHREEYEARSANDTOBEEXPECTEDINTHENEXTTHREEYEARS}}</td>
+                          <td style="width: 10%;" ><h1></h1></td>
+                          <td class="w3-card" style=" text-align: center; border-width: 0px;">
+                            <h6></h6>
+                              {{OVERVIEWOFTHECOMPANYAFTERMAKINGAINDEAPTHSTUDYOFFINNCIALSSIMILARCOMPANIESANDIndustries}}</td>
+                    </table>
+                    
+                </div>
+            </div><br>
+     <!-------------------------------------------------------------------------------------------------------------------->       
+    <div class="container" style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">Q1 TAKE AWAYS</h6>
+               <p style="text-align: center;">{{QoneTAKEAWAYS}}</p> 
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">Q2 TAKE AWAYS</h6>
+               <p style="text-align: center;">{{QtwoTAKEAWAYS}}</p> 
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">Q3 TAKE AWAYS</h6>
+               <p style="text-align: center;">{{QthreeTAKEAWAYS}}</p> 
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">Q4 TAKE AWAYS</h6>
+               <p style="text-align: center;">{{QfourTAKEAWAYS}}</p> 
+            </div>
+        </div>
+    
+    </div>
+    
+     <!-------------------------------------------------------------------------------------------------------------------->       
+            <!--<div class="w3-row"  style="margin: 20px;">
+               
+                    <table class="w3-table" style="table-layout: fixed;">
+                        <tr>
+                            <td class="w3-card" style="text-align: center; border-width: 0px;">
+                               <h6>Q1 TAKE AWAYS</h6> {{QoneTAKEAWAYS}}</td>
+                            <td style="text-align: center; border-width: 0px;">
+                                <h6>Q2 TAKE AWAYS</h6> {{QtwoTAKEAWAYS}}</td>
+                            <td class="w3-card" style="text-align: center; border-width: 0px;">
+                                <h6>Q3 TAKE AWAYS</h6> {{QthreeTAKEAWAYS}}</td>
+                            <td   style="text-align: center; border-width: 0px;">
+                                <h6>Q4 TAKE AWAYS</h6> {{QfourTAKEAWAYS}}</td>
+                            </tr>
+                    </table>
+                 
+            </div>-->
+    <!------------------------------------------------------------------------------------------------------------------------------>        
+            <br>
+            <div class="w3-row"  style="margin: 20px;">
+                <div class="w3-col m12">
+                    <td class="w3-col m2"><h1></h1></td>
+                    <td class="w3-col m8" style="text-align:center; border-width: 0px;"><h6>UNDERSTANDINGS FROM LAST 4Qs</h6>{{OVERVIEWONfourQS}}</td>
+                    <td class="w3-col m2"><h1></h1></td>
+                </div>
+            </div><br>
+        </div>
+        <br><br>
+    
+    <!----------------------------------------------------------------------------------------------------------------------------------->
+    
+    <div class="" style="background-color: white;"><br>
+        <div class="w3-row " style="margin: 20px;">
+             
+                <tr class="w3-col">
+                    <td class="w3-card w3-col m5" style="  text-align: center; border-width: 0px;"><h6>MARKET CAPITAL</h6>{{MARKETCAPITAL}} </td>
+                    <td class="w3-col m2" > <h1></h1></td>
+                    <td class="w3-card w3-col m5" style="  text-align: center; border-width: 0px;"><h6>VALUE OF STOCK</h6>{{VALUEOFSTOCK}}</td>
+                </tr>
+            
+        </div>
+    <!--------------------------------------------------------------------------------------------------------------------------------->    
+    <br>
+    
+    <div class="container"
+                style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">ROCE % : {{ROCE}}</h6>
+               <p style="text-align: center;">{{TAKEAWAYONROCE}}</p> 
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">EVEBITDA : {{EVEBITDA}}</h6>
+               <p style="text-align: center;">{{TAKEAWAYONEVEBITDA}}</p> 
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">ROE : {{ROE}}</h6>
+               <p style="text-align: center;">{{TAKEAWAYONROE}}</p> 
+            </div>
+        </div>
+       
+    </div>
+    <br>
+    <!------------------------------------------------------------------------------------------------------------------------------>    
+        <!--<div class="w3-row" style="margin: 20px;">
+            
+                <tr class="w3-col">
+                    <td  class=" w3-card w3-col m4" style="  text-align: center; border-width: 0px;"><h6>ROCE % : {{ROCE}}</h6>{{TAKEAWAYONROCE}}</td>
+                    <td class="w3-card w3-col m4" style="  text-align: center; border-width: 0px;"><h6>EVEBITDA : {{EVEBITDA}}</h6>{{TAKEAWAYONEVEBITDA}}</td>
+                    <td class="w3-card w3-col m4" style="    text-align: center; border-width: 0px;"><h6>ROE : {{ROE}}</h6>{{TAKEAWAYONROE}}</td>
+                </tr>
+            
+        </div>-->
+    <!----------------------------------------------------------------------------------------------------------------------------------->    
+        <!--<div class="w3-row" style="margin: 20px;">
+            <table style="table-layout: fixed;">
+                <tr>
+                    <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON ROCE</h6>{{TAKEAWAYONROCE}}</td>
+                    <td  class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON EVEBITDA</h6>{{TAKEAWAYONEVEBITDA}}</td>
+                    <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON ROE</h6>{{TAKEAWAYONROE}}</td>
+                </tr>
+            </table>
+        </div>-->
+    <!------------------------------------------------------------------------------------------------------------------------------------>    
+     
+    <div class="container"
+                style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
+        <div class="column">
+            <div>
+                <h6 style="text-align: center;">PE RATIO : {{PERATIO}}</h6><p style="text-align: center;">{{TAKEAWAYONPERATIO}}</p>
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+               <h6 style="text-align: center;"> PAT : {{PAT}}</h6>
+              <p style="text-align: center;">{{TAKEAWAYONPAT}}</p> 
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">DEBT TO EQUITY : {{DEBTTOEQUITY}}</h6>
+                <p style="text-align: center;">{{TAKEAWAYONDEBTTOEQUITY}}</p> 
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">ROA : {{ROA}}</h6>
+               <p style="text-align: center;">{{TAKEAWAYONROA}}</p> 
+            </div>
+        </div>
+       
+    </div>
+    
+     <!---------------------------------------------------------------------------------------------------------------------------------->   
+      <!--  <div class="w3-row" style="margin: 20px;">
+             <table class="w3-table" style="table-layout: fixed;">
+                <tr >
+                    <td class="w3-card" style=" text-align: center; border-width: 0px;"><h6>PE RATIO : {{PERATIO}}</h6>{{TAKEAWAYONPERATIO}}</td>
+                    <td class="w3-card" style="  text-align: center; border-width: 0px;"><h6>PAT : {{PAT}}</h6>{{TAKEAWAYONPAT}}</td>
+                    <td class="w3-card" style="  text-align: center; border-width: 0px;"><h6>DEBT TO EQUITY : {{DEBTTOEQUITY}}</h6>{{TAKEAWAYONDEBTTOEQUITY}}</td>
+                    <td class="w3-card" style="  text-align: center; border-width: 0px;"><h6>ROA : {{ROA}}</h6>{{TAKEAWAYONROA}}</td>
+                </tr>
+             </table>
+               
              
         </div>-->
-<!------------------------------------------------------------------------------------------------------------------------------>        
-        <br>
-        <div class="w3-row"  style="margin: 20px;">
-            <div class="w3-col m12">
-                <td class="w3-col m2"><h1></h1></td>
-                <td class="w3-col m8" style="text-align:center; border-width: 0px;"><h6>UNDERSTANDINGS FROM LAST 4Qs</h6>{{OVERVIEWONfourQS}}</td>
-                <td class="w3-col m2"><h1></h1></td>
-            </div>
-        </div><br>
-    </div>
+     <!------------------------------------------------------------------------------------------------------------------------------------->   
+        <!--<div class="w3-row" style="margin: 20px;">
+            <table style="table-layout: fixed;">
+                <tr>
+                    <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON PE RATION</h6>{{TAKEAWAYONPERATIO}}</td>
+                    <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON PAT</h6>{{TAKEAWAYONPAT}}</td>
+                    <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKE AWAY ON DEBT TO EQUITY</h6>{{TAKEAWAYONDEBTTOEQUITY}}</td>
+                    <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKE AWAY ON ROA</h6>{{TAKEAWAYONROA}}</td>
+                </tr>
+            </table>
+        </div>--><br>
+    </div> 
+    
     <br><br>
-
-<!----------------------------------------------------------------------------------------------------------------------------------->
-
-<div class="" style="background-color: white;"><br>
-    <div class="w3-row " style="margin: 20px;">
-         
-            <tr class="w3-col">
-                <td class="w3-card w3-col m5" style="  text-align: center; border-width: 0px;"><h6>MARKET CAPITAL</h6>{{MARKETCAPITAL}} </td>
-                <td class="w3-col m2" > <h1></h1></td>
-                <td class="w3-card w3-col m5" style="  text-align: center; border-width: 0px;"><h6>VALUE OF STOCK</h6>{{VALUEOFSTOCK}}</td>
-            </tr>
-        
-    </div>
-<!--------------------------------------------------------------------------------------------------------------------------------->    
-<br>
-
-<div class="container"
-            style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">ROCE % : {{ROCE}}</h6>
-           <p style="text-align: center;">{{TAKEAWAYONROCE}}</p> 
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">EVEBITDA : {{EVEBITDA}}</h6>
-           <p style="text-align: center;">{{TAKEAWAYONEVEBITDA}}</p> 
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">ROE : {{ROE}}</h6>
-           <p style="text-align: center;">{{TAKEAWAYONROE}}</p> 
-        </div>
-    </div>
-   
-</div>
-<br>
-<!------------------------------------------------------------------------------------------------------------------------------>    
-    <!--<div class="w3-row" style="margin: 20px;">
-        
-            <tr class="w3-col">
-                <td  class=" w3-card w3-col m4" style="  text-align: center; border-width: 0px;"><h6>ROCE % : {{ROCE}}</h6>{{TAKEAWAYONROCE}}</td>
-                <td class="w3-card w3-col m4" style="  text-align: center; border-width: 0px;"><h6>EVEBITDA : {{EVEBITDA}}</h6>{{TAKEAWAYONEVEBITDA}}</td>
-                <td class="w3-card w3-col m4" style="    text-align: center; border-width: 0px;"><h6>ROE : {{ROE}}</h6>{{TAKEAWAYONROE}}</td>
-            </tr>
-        
-    </div>-->
-<!----------------------------------------------------------------------------------------------------------------------------------->    
-    <!--<div class="w3-row" style="margin: 20px;">
-        <table style="table-layout: fixed;">
-            <tr>
-                <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON ROCE</h6>{{TAKEAWAYONROCE}}</td>
-                <td  class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON EVEBITDA</h6>{{TAKEAWAYONEVEBITDA}}</td>
-                <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON ROE</h6>{{TAKEAWAYONROE}}</td>
-            </tr>
-        </table>
-    </div>-->
-<!------------------------------------------------------------------------------------------------------------------------------------>    
- 
-<div class="container"
-            style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
-    <div class="column">
-        <div>
-            <h6 style="text-align: center;">PE RATIO : {{PERATIO}}</h6><p style="text-align: center;">{{TAKEAWAYONPERATIO}}</p>
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-           <h6 style="text-align: center;"> PAT : {{PAT}}</h6>
-          <p style="text-align: center;">{{TAKEAWAYONPAT}}</p> 
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">DEBT TO EQUITY : {{DEBTTOEQUITY}}</h6>
-            <p style="text-align: center;">{{TAKEAWAYONDEBTTOEQUITY}}</p> 
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">ROA : {{ROA}}</h6>
-           <p style="text-align: center;">{{TAKEAWAYONROA}}</p> 
-        </div>
-    </div>
-   
-</div>
-
- <!---------------------------------------------------------------------------------------------------------------------------------->   
-  <!--  <div class="w3-row" style="margin: 20px;">
-         <table class="w3-table" style="table-layout: fixed;">
-            <tr >
-                <td class="w3-card" style=" text-align: center; border-width: 0px;"><h6>PE RATIO : {{PERATIO}}</h6>{{TAKEAWAYONPERATIO}}</td>
-                <td class="w3-card" style="  text-align: center; border-width: 0px;"><h6>PAT : {{PAT}}</h6>{{TAKEAWAYONPAT}}</td>
-                <td class="w3-card" style="  text-align: center; border-width: 0px;"><h6>DEBT TO EQUITY : {{DEBTTOEQUITY}}</h6>{{TAKEAWAYONDEBTTOEQUITY}}</td>
-                <td class="w3-card" style="  text-align: center; border-width: 0px;"><h6>ROA : {{ROA}}</h6>{{TAKEAWAYONROA}}</td>
-            </tr>
-         </table>
-           
-         
-    </div>-->
- <!------------------------------------------------------------------------------------------------------------------------------------->   
-    <!--<div class="w3-row" style="margin: 20px;">
-        <table style="table-layout: fixed;">
-            <tr>
-                <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON PE RATION</h6>{{TAKEAWAYONPERATIO}}</td>
-                <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKEAWAY ON PAT</h6>{{TAKEAWAYONPAT}}</td>
-                <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKE AWAY ON DEBT TO EQUITY</h6>{{TAKEAWAYONDEBTTOEQUITY}}</td>
-                <td class="w3-card" style="width: 10%; text-align: center; border-width: 0px;"><h6>TAKE AWAY ON ROA</h6>{{TAKEAWAYONROA}}</td>
-            </tr>
-        </table>
-    </div>--><br>
-</div> 
-
-<br><br>
-<!--------------------------------------------------------------------------------------------------------------------->
-
-<div class="container"
-            style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">Strengths</h6>
-           <p style="text-align: center;">{{Strengths}}</p> 
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">Weekness</h6>
-           <p style="text-align: center;">{{Weekness}}</p> 
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">Opportunities</h6>
-          <p style="text-align: center;">{{Opportunities}}</p>  
-        </div>
-    </div>
-    <div class="column">
-        <div  >
-            <h6 style="text-align: center;">Threats</h6>
-           <p style="text-align: center;">{{Threats}}</p> 
-        </div>
-    </div>
-   
-</div>
-
-<!--------------------------------------------------------------------------------------------------------------------------->
-<!--
-<div class="" style="background-color:white"><br>
-    <div class="w3-row" style="margin: 20px;">
-        <table class="w3-table" style="table-layout: fixed;">
-            
-                <td class="w3-card " style="text-align: center;border-width: 0px;;"><h6>Strengths</h6>{{Strengths}}</td>
-                <td class="w3-card " style="text-align: center;border-width: 0px; margin-left: 20px;"><h6>Weekness</h6>{{Weekness}}</td>
-                <td class="w3-card " style="text-align: center;border-width: 0px;"><h6>Opportunities</h6>{{Opportunities}}</td>
-                <td class="w3-card  " style="text-align: center;border-width: 0px;"><h6>Threats</h6>{{Threats}}</td>
-             
-        </table>
-        
-    </div><br>
- 
-</div>-->
-<!----------------------------------------------------------------------------------------------------------------------->
-
-<div style="background-color: white; margin: 20px;"><br>
-    <div>
-        <table class="w3-table" style="table-layout: fixed; text-align: center;">
-            <tbody>
-                <tr>
-                    <td class="w3-card">
-                        <div style="column-gap: 50px;">
-
-                <tr>
-                    <td style="width: 25%;"></td>
-                    <td>2019</td>
-                    <td>2020</td>
-                    <td>2021</td>
-                </tr>
-
-
-                <tr>
-                    <td>Sales</td>
-                    <td>{{SalesinMINESTWO}}</td>
-                    <td>{{salesinMINESONE}}</td>
-                    <td>{{salesinZERO}}</td>
-                </tr>
-                <tr>
-                    <td>Expenses</td>
-                    <td>{{EPSINMINESTWO}}</td>
-                    <td>{{EPSINMINESONE}}</td>
-                    <td>{{EPSINZERO}}</td>
-                </tr>
-                <tr>
-                    <td>Operating Profit</td>
-                    <td>{{OperatingProfitinMINESTWO}}</td>
-                    <td>{{OperatingProfitinMINESone}}</td>
-                    <td>{{OperatingProfitinzero}}</td>
-                </tr>
-    </div>
-    </td>
-    <td class="w3-card">
-        <div style="display: flex; margin: 70px auto 40px auto;">
-            <div style="margin: auto;">
-                <h6 style="text-align: center;">TAKEAWAY on Operating Profit</h6>
-                <p style="text-align: center;">{{TAKEAWAYonOperatingProfit}}</p>
+    <!--------------------------------------------------------------------------------------------------------------------->
+    
+    <div class="container"
+                style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">Strengths</h6>
+               <p style="text-align: center;">{{Strengths}}</p> 
             </div>
-
-
         </div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-</div>
-<br>
-</div>
-
-
-<!------------------------------------------------------------------------------------------------------------------>
-<br>
-<!--<div class="" style="background-color: white;"><br>
-    <div style="margin: 20px;">
-        <table class="w3-table" style="text-align: center; table-layout: fixed;">
-            <tbody>
-                <tr>
-                    <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>Sales in 2019</h6>{{SalesinMINESTWO}}</td>
-                    <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>Expenses in 2019</h6>{{EPSINMINESTWO}}</td>
-                    <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>OPerating Profit in 2019</h6>{{OperatingProfitinMINESTWO}}</td>
-                </tr>
-                <tr>
-                    <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>Sales in 2020</h6>{{salesinMINESONE}}</td>
-                    <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>Expenses in 2020</h6>{{EPSINMINESONE}}</td>
-                    <td class="w3-card" style="text-align: center; border-width: 0px;"><h6 style="color: red;">OPerating Profit in 2020</h6></td>
-                </tr>
-                <tr>
-                    <td class="w3-card" style="text-align: center; border-width: 0px;"><h6>Sales in 2021</h6>{{salesinZERO}}</td>
-                    <td class="w3-card" style="text-align: center; border-width: 0px;"><h6>Expenses in 2021</h6>{{EPSINZERO}}</td>
-                    <td class="w3-card" style="text-align: center; border-width: 0px;"><h6 style="color: red;">OPerating Profit in 2021</h6></td>
-                </tr>-->
-                <!--<tr>
-                    <td><h6></h6></td>
-                    <td style="text-align: center;"><h6>TAKEAWAY on Operating Profit</h6>{{TAKEAWAYonOperatingProfit}}</td>
-                    <td><h6></h6></td>
-                </tr>     -->       
-            <!--</tbody>
-        
-        </table>
-        <table class="w3-table">
-            <tbody>
-                <tr>
-                    <h6 style="text-align: center;">TAKEAWAY on Operating Profit</h6>
-                     <p style="text-align: center;">{{TAKEAWAYonOperatingProfit}}</p> 
-                </tr>
-            </tbody>
-        </table>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">Weekness</h6>
+               <p style="text-align: center;">{{Weekness}}</p> 
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">Opportunities</h6>
+              <p style="text-align: center;">{{Opportunities}}</p>  
+            </div>
+        </div>
+        <div class="column">
+            <div  >
+                <h6 style="text-align: center;">Threats</h6>
+               <p style="text-align: center;">{{Threats}}</p> 
+            </div>
+        </div>
+       
     </div>
     
-</div>-->
-
-
-<!----------------------------------------------------------------------------------------------------------------------->
-
-<div style="background-color: white; margin: 20px;"><br>
-    <div>
-        <table class="w3-table" style="text-align: center;"><!---removed text-layout : fixed;-->
-            <tbody>
+    <!--------------------------------------------------------------------------------------------------------------------------->
+    <!--
+    <div class="" style="background-color:white"><br>
+        <div class="w3-row" style="margin: 20px;">
+            <table class="w3-table" style="table-layout: fixed;">
                 
-                <tr>
-                    <td class="w3-card">
-                        <div style="column-gap: 50px;">
-
-                <tr>
-                    <td style="width: 25%;"></td>
-                    <td style="width: 25%;">PAT</td>
-                   
-                </tr>
-                <tr>
-                    <td>2019</td>
-                    <td>{{PATINMINESTWO}}</td>
-                    
-                </tr>
-                <tr>
-                    <td>2020</td>
-                    <td>{{PATINMINESONE}}</td>
-                    
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>{{PATINZERO}}</td>
-                    
-                </tr>
-
-                
-    </div>
-    </td>
-    <td class="w3-card">
-        <div style="display: flex; margin: 70px auto 40px auto;">
-            <div style="margin: auto;">
-                <h6 style="text-align: center;">Takeaways from PAT</h6>
-                <p style="text-align: center;">{{TAKEAWAYONPAT}}</p>
-            </div>
-
-
+                    <td class="w3-card " style="text-align: center;border-width: 0px;;"><h6>Strengths</h6>{{Strengths}}</td>
+                    <td class="w3-card " style="text-align: center;border-width: 0px; margin-left: 20px;"><h6>Weekness</h6>{{Weekness}}</td>
+                    <td class="w3-card " style="text-align: center;border-width: 0px;"><h6>Opportunities</h6>{{Opportunities}}</td>
+                    <td class="w3-card  " style="text-align: center;border-width: 0px;"><h6>Threats</h6>{{Threats}}</td>
+                 
+            </table>
+            
+        </div><br>
+     
+    </div>-->
+    <!----------------------------------------------------------------------------------------------------------------------->
+    
+    <div style="background-color: white; margin: 20px;"><br>
+        <div>
+            <table class="w3-table" style="table-layout: fixed; text-align: center;">
+                <tbody>
+                    <tr>
+                        <td class="w3-card">
+                            <div style="column-gap: 50px;">
+    
+                    <tr>
+                        <td style="width: 25%;"></td>
+                        <td>2019</td>
+                        <td>2020</td>
+                        <td>2021</td>
+                    </tr>
+    
+    
+                    <tr>
+                        <td>Sales</td>
+                        <td>{{SalesinMINESTWO}}</td>
+                        <td>{{salesinMINESONE}}</td>
+                        <td>{{salesinZERO}}</td>
+                    </tr>
+                    <tr>
+                        <td>Expenses</td>
+                        <td>{{EPSINMINESTWO}}</td>
+                        <td>{{EPSINMINESONE}}</td>
+                        <td>{{EPSINZERO}}</td>
+                    </tr>
+                    <tr>
+                        <td>Operating Profit</td>
+                        <td>{{OperatingProfitinMINESTWO}}</td>
+                        <td>{{OperatingProfitinMINESone}}</td>
+                        <td>{{OperatingProfitinzero}}</td>
+                    </tr>
         </div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-</div>
-<br>
-</div>
-<br>
-
-<!------------------------------------------------------------------------------------------------------------------------------>
-<!--<div class=""  style="background-color: white;"><br>
-    <div class="w3-card" style="margin: 20px;">
-        <table class="w3-table" style="table-layout: fixed;">
-            <tbody>
-                <tr>
-                    <td style="border-width: 0px; text-align: center;">
-                        <h6>PAT IN 2019</h6>{{PATINMINESTWO}}
-                        <h6>PAT IN 2020</h6>{{PATINMINESONE}}
-                        <h6>PAT IN 2021</h6>{{PATINZERO}}
-                    </td>
-                    <div style="display: flex; margin: 40px auto 40px auto;">
-                        <td style="border-width: 0px; text-align: center;"><h6>Takeaways from PAT</h6>{{TAKEAWAYONPAT}}</td>--><!--TakeAWAY from pat is Take away on pat-->
-                    <!--</div>-->
-                    
-                    <!--<td style="border-width: 0px; text-align: center;">
-                        <h6>EPS IN 2019</h6>{{EPSINMINESTWO}}
-                        <h6>EPS IN 2020</h6>{{EPSINMINESONE}}
-                        <h6>EPS IN 2021</h6>{{EPSINZERO}}
-                    </td>
-                    <div  style="display: flex; margin: 40px auto 40px auto;">
-                        <td style="border-width: 0px; text-align: center;"> <h6>TAKEAWAY ON EPS</h6>{{TAKEAWAYONEPS}}</td>
-                    </div>-->
-                    
-                <!--</tr>
-            </tbody>
+        </td>
+        <td class="w3-card">
+            <div style="display: flex; margin: 70px auto 40px auto;">
+                <div style="margin: auto;">
+                    <h6 style="text-align: center;">TAKEAWAY on Operating Profit</h6>
+                    <p style="text-align: center;">{{TAKEAWAYonOperatingProfit}}</p>
+                </div>
+    
+    
+            </div>
+        </td>
+        </tr>
+        </tbody>
         </table>
-    </div><br>
-</div>
-<br><br>-->
-<!------------------------------------------------------------------------------------------------------------------->
-
-
-<div style="background-color: white; margin: 20px;"><br>
-    <div>
-        <table class="w3-table" style="text-align: center;"><!---removed text-layout : fixed;-->
+    </div>
+    <br>
+    </div>
+    
+    
+    <!------------------------------------------------------------------------------------------------------------------>
+    <br>
+    <!--<div class="" style="background-color: white;"><br>
+        <div style="margin: 20px;">
+            <table class="w3-table" style="text-align: center; table-layout: fixed;">
+                <tbody>
+                    <tr>
+                        <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>Sales in 2019</h6>{{SalesinMINESTWO}}</td>
+                        <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>Expenses in 2019</h6>{{EPSINMINESTWO}}</td>
+                        <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>OPerating Profit in 2019</h6>{{OperatingProfitinMINESTWO}}</td>
+                    </tr>
+                    <tr>
+                        <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>Sales in 2020</h6>{{salesinMINESONE}}</td>
+                        <td  class="w3-card" style="text-align: center; border-width: 0px;"><h6>Expenses in 2020</h6>{{EPSINMINESONE}}</td>
+                        <td class="w3-card" style="text-align: center; border-width: 0px;"><h6 style="color: red;">OPerating Profit in 2020</h6></td>
+                    </tr>
+                    <tr>
+                        <td class="w3-card" style="text-align: center; border-width: 0px;"><h6>Sales in 2021</h6>{{salesinZERO}}</td>
+                        <td class="w3-card" style="text-align: center; border-width: 0px;"><h6>Expenses in 2021</h6>{{EPSINZERO}}</td>
+                        <td class="w3-card" style="text-align: center; border-width: 0px;"><h6 style="color: red;">OPerating Profit in 2021</h6></td>
+                    </tr>-->
+                    <!--<tr>
+                        <td><h6></h6></td>
+                        <td style="text-align: center;"><h6>TAKEAWAY on Operating Profit</h6>{{TAKEAWAYonOperatingProfit}}</td>
+                        <td><h6></h6></td>
+                    </tr>     -->       
+                <!--</tbody>
+            
+            </table>
+            <table class="w3-table">
+                <tbody>
+                    <tr>
+                        <h6 style="text-align: center;">TAKEAWAY on Operating Profit</h6>
+                         <p style="text-align: center;">{{TAKEAWAYonOperatingProfit}}</p> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>-->
+    
+    
+    <!----------------------------------------------------------------------------------------------------------------------->
+    <div style=" margin:0 auto;display: flex;"><br>
+        <div>
+            <table class="w3-table" style="text-align: center; ">
+                <!---removed t-layout : fixed;-->
+                <tbody>
+    
+                    <tr>
+                        <td class="w3-card">
+                            <div style="column-gap: 50px;">
+    
+                    <tr>
+                        <td style="width: 25%;"></td>
+                        <td style="width: 25%;">PAT</td>
+    
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td>{{PATINMINESTWO}}</td>
+    
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>{{PATINMINESONE}}</td>
+    
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>{{PATINZERO}}</td>
+    
+                    </tr>
+    
+    
+        </div>
+        </td>
+        <td class="w3-card">
+            <div style="display: flex; margin: 70px auto 40px auto;">
+                <div style="margin: auto;">
+                    <h6 style="text-align: center;">Takeaways from PAT</h6>
+                    <p style="text-align: center;">{{TAKEAWAYONPAT}}</p>
+                </div>
+    
+    
+            </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    <!--------------------------------------->
+    <div >
+        <table class="w3-table" style="text-align: center; ">
+            <!---removed text-layout : fixed;-->
             <tbody>
-                
+    
                 <tr>
                     <td class="w3-card">
                         <div style="column-gap: 50px;">
-
+    
                 <tr>
                     <td style="width: 25%;"></td>
                     <td style="width: 25%;">EPS</td>
-                   
+    
                 </tr>
                 <tr>
                     <td>2019</td>
                     <td>{{EPSINMINESTWO}}</td>
-                    
+    
                 </tr>
                 <tr>
                     <td>2020</td>
                     <td>{{EPSINMINESONE}}</td>
-                    
+    
                 </tr>
                 <tr>
                     <td>2021</td>
                     <td>{{EPSINZERO}}</td>
-                    
+    
                 </tr>
-
-                
+    
+    
     </div>
     </td>
     <td class="w3-card">
@@ -579,291 +638,437 @@
                 <h6 style="text-align: center;">TAKEAWAY ON EPS</h6>
                 <p style="text-align: center;">{{TAKEAWAYONEPS}}</p>
             </div>
-
-
+    
+    
         </div>
     </td>
     </tr>
     </tbody>
     </table>
-</div>
-<br>
-</div>
-<br>
-
-<br>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-<!--<div class="" style="background-color: white;"><br>
-    <div class="w3-card" style="margin: 20px;">
-        <table class="w3-table" style="table-layout: fixed;">
-            <tbody>
-                <tr>
-                    <td style="border-width: 0px; text-align: center;">
-                        <h6>EPS IN 2019</h6>{{EPSINMINESTWO}}
-                        <h6>EPS IN 2020</h6>{{EPSINMINESONE}}
-                        <h6>EPS IN 2021</h6>{{EPSINZERO}}
-                    </td>
-                    <div  style="display: flex; margin: 40px auto 40px auto;">
-                        <td style="border-width: 0px; text-align: center;"> <h6>TAKEAWAY ON EPS</h6>{{TAKEAWAYONEPS}}</td>
-                    </div>
-                </tr>
-            </tbody>
-        </table>
+    <!------------------------------------->
+    
     </div>
-</div>-->
-
-
-<!---------------------------------------------------------------------------------------------------------------------------------->
-<div class="" style="background-color: white;"><br>
-    <div class="w3-card" style="margin: 20px;">
-        <table class="w3-table" style="table-layout: fixed;">
-            <tbody>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"></td>
-                    <td style="text-align: center; border-width: 0px;"><h6>Compounded sales Growth</h6></td>
-                    <td style="text-align: center; border-width: 0px;"><h6>Compounded Profit Growth</h6></td>
-                    <td style="text-align: center; border-width: 0px;"><h6>Stock Price CAGR</h6></td>
-                    <td style="text-align: center; border-width: 0px;"><h6>Return on Equity</h6></td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"><h6>1 year</h6></td>
-                    <td style="text-align: center; border-width: 0px;">{{CompoundedSalesGrowthONEyear}}</td>
-                    <td style="text-align: center; border-width: 0px;">{{CompoundedProfitGrowthforONEYear}}</td>
-                    <td style="text-align: center; border-width: 0px;">{{StockPriceCAGRForoneyear}}</td>
-                    <td style="text-align: center; border-width: 0px;">{{ReturnonEquityForoneYear}}</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"><h6>2 years</h6></td>
-                    <td style="text-align: center; border-width: 0px;">{{CompoundedSalesGrowthTWOyears}}</td>
-                    <td style="text-align: center; border-width: 0px;">{{CompoundedProfitGrowthfortwoYears}}</td>
-                    <td style="text-align: center; border-width: 0px;">{{StockPriceCAGRFortwoyears}}</td>
-                    <td style="text-align: center; border-width: 0px;">{{ReturnonEquityFortwoYears}}</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"><h6>3 years</h6></td>
-                    <td style="text-align: center; border-width: 0px;">{{CompoundedSalesGrowthTHREEyears}}</td>
-                    <td style="text-align: center; border-width: 0px;">{{CompoundedProfitGrowthforthreeYear}}</td>
-                    <td style="text-align: center; border-width: 0px;">{{StockPriceCAGRForthreeyear}}</td>
-                    <td style="text-align: center; border-width: 0px;">{{ReturnonEquityForthreeYears}}</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"></td>
-                    <td style="text-align: center; border-width: 0px;"><h6>TAKEAWAY FROM Compounded Sales Growth</h6>{{TAKEAWAYonCompoundedSalesGrowth}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>Takeaway from Compounded Profit Growth</h6>{{TAKEAWAYonCompoundedProfitGrowth}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>takeaway from Stock CAGR</h6>{{TAKEAWAYonStockPriceCAGR}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>Takeaway from Return on Equity</h6>{{TAKEAWAYOnReturnonEquity}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div><br>
+    <br>
+    </div>
+    <br>
     
-    
-</div>
-
-        
-<br><br>
-
-
-<!------------------------------------------------------------------------------------------------------->
-<div style="background-color: white; margin: 20px;"><br>
-    <div>
-        <table class="w3-table" style="table-layout: fixed; text-align: center;">
-            <tbody>
-                <tr>
-                    <td  class="w3-card" >
-                <div   style="column-gap: 50px;">
-                    
-                        <tr>
-                            <td style="width: 25%;"></td>
-                            <td>2019</td>
-                            <td>2020</td>
-                            <td>2021</td>
-                        </tr>
-                    
-                
-                <tr>
-                    <td>SHARE CAPITAL</td>
-                    <td>{{SHARECAPITALINMINESTWO}}</td>
-                    <td>{{SHARECAPITALINMINESONE}}</td>
-                    <td>{{SHARECAPITALINZERO}}</td>
-                </tr>
-                <tr>
-                    <td>RESERVES</td>
-                    <td>{{RESERVESINMINESTWO}}</td>
-                    <td>{{RESERVESINMINESONE}}</td>
-                    <td>{{RESERVESINZERO}}</td>
-                </tr>
-                <tr>
-                    <td>LIABILITIES</td>
-                    <td>{{LIABILITIESINMINESTWO}}</td>
-                    <td>{{LIABILITIESINMINESONE}}</td>
-                    <td>{{LIABILITIESINZERO}}</td>
-                </tr>
-                <tr>
-                    <td>ASSETS</td>
-                    <td>{{ASSETSINMINESTWO}}</td>
-                    <td>{{ASSESTSINMINESONE}}</td>
-                    <td>{{ASSESTSINZERO}}</td>
-                </tr></div></td>
-                <td  class="w3-card">
-                    <div  style="display: flex; margin: 80px auto 40px auto;">
-                        <div style="margin: auto;">
-                            <h6 style="text-align: center;">TAKEAWAYS FOR CHANGES IN 3 YEARS BALANCE SHEET</h6> 
-                            <p style="text-align: center;">{{TAKEAWAYSFORCHANGESINTHREEYEARSBALANCESHEET}}</p> 
-                        </div>
+    <!------------------------------------------------------------------------------------------------------------------------------>
+    <!--<div class=""  style="background-color: white;"><br>
+        <div class="w3-card" style="margin: 20px;">
+            <table class="w3-table" style="table-layout: fixed;">
+                <tbody>
+                    <tr>
+                        <td style="border-width: 0px; text-align: center;">
+                            <h6>PAT IN 2019</h6>{{PATINMINESTWO}}
+                            <h6>PAT IN 2020</h6>{{PATINMINESONE}}
+                            <h6>PAT IN 2021</h6>{{PATINZERO}}
+                        </td>
+                        <div style="display: flex; margin: 40px auto 40px auto;">
+                            <td style="border-width: 0px; text-align: center;"><h6>Takeaways from PAT</h6>{{TAKEAWAYONPAT}}</td>--><!--TakeAWAY from pat is Take away on pat-->
+                        <!--</div>-->
                         
-                   
-                </div></td>
-            </tr>
-
-                <!--
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"><h6>SHARE CAPITAL IN 2019</h6></td>
-                    <td style="text-align: center; border-width: 0px;"><h6>RESERVES IN 2019</h6>{{RESERVESINMINESTWO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>LIABILITIES IN 2019</h6>{{LIABILITIESINMINESTWO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>ASSETS IN 2019</h6>{{ASSETSINMINESTWO}}</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"><h6>SHARE CAPITAL IN 2020</h6>{{SHARECAPITALINMINESONE}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>RESERVES IN 2020</h6>{{RESERVESINMINESONE}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>LIABILITIES IN 2020</h6>{{LIABILITIESINMINESONE}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>ASSETS IN 2020</h6>{{ASSESTSINMINESONE}}</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"><h6 >SHARE CAPITAL IN 2021</h6>{{SHARECAPITALINZERO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>RESERVES IN 2021</h6>{{RESERVESINZERO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>LIABILITIES IN 2021</h6>{{LIABILITIESINZERO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>ASSETS IN 2021</h6>{{ASSESTSINZERO}}</td>
-                </tr>-->
-               
-            </tbody>
-        </table>
-       <!-- <table class="w3-table">
-            <tbody>
-                <tr>
-                    <h6 style="text-align: center;">TAKEAWAYS FOR CHANGES IN 3 YEARS BALANCE SHEET</h6> 
-                    <p style="text-align: center;">{{TAKEAWAYSFORCHANGESINTHREEYEARSBALANCESHEET}}</p> 
-                </tr>
-            </tbody>
-        </table>-->
+                        <!--<td style="border-width: 0px; text-align: center;">
+                            <h6>EPS IN 2019</h6>{{EPSINMINESTWO}}
+                            <h6>EPS IN 2020</h6>{{EPSINMINESONE}}
+                            <h6>EPS IN 2021</h6>{{EPSINZERO}}
+                        </td>
+                        <div  style="display: flex; margin: 40px auto 40px auto;">
+                            <td style="border-width: 0px; text-align: center;"> <h6>TAKEAWAY ON EPS</h6>{{TAKEAWAYONEPS}}</td>
+                        </div>-->
+                        
+                    <!--</tr>
+                </tbody>
+            </table>
+        </div><br>
     </div>
-    <!--<div class="w3-card w3-col m6">
-        <table class="w3-table">
-            <tbody>
-                <tr>
-                    <h6 style="text-align: center;">TAKEAWAYS FOR CHANGES IN 3 YEARS BALANCE SHEET</h6> 
-                    <p style="text-align: center;">{{TAKEAWAYSFORCHANGESINTHREEYEARSBALANCESHEET}}</p> 
-                </tr>
-            </tbody>
-        </table>
-    </div>-->
-    <br>  
-</div>
-<br>
-
-<br>
-
-<!-------------------------------------------------------------------------------------------------------------------->
-<div style="background-color: white; margin: 20px;"><br>
-    <div>
-        <table class="w3-table" style="table-layout: fixed; text-align: center;">
-            <tbody>
-<tr>
-    <td  class="w3-card" >
-<div   style="column-gap: 50px;">
+    <br><br>-->
+    <!------------------------------------------------------------------------------------------------------------------->
     
-        <tr>
-            <td style="width: 25%;"></td>
-            <td>2019</td>
-            <td>2020</td>
-            <td>2021</td>
+    
+    <!--<div style="background-color: white; margin: 20px;"><br>
+        <div>
+            <table class="w3-table" style="text-align: center;">--><!---removed text-layout : fixed;-->
+                <!--<tbody>
+                    
+                    <tr>
+                        <td class="w3-card">
+                            <div style="column-gap: 50px;">
+    
+                    <tr>
+                        <td style="width: 25%;"></td>
+                        <td style="width: 25%;">EPS</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td>{{EPSINMINESTWO}}</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>{{EPSINMINESONE}}</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>{{EPSINZERO}}</td>
+                        
+                    </tr>
+    
+                    
+        </div>
+        </td>
+        <td class="w3-card">
+            <div style="display: flex; margin: 70px auto 40px auto;">
+                <div style="margin: auto;">
+                    <h6 style="text-align: center;">TAKEAWAY ON EPS</h6>
+                    <p style="text-align: center;">{{TAKEAWAYONEPS}}</p>
+                </div>
+    
+    
+            </div>
+        </td>
         </tr>
+        </tbody>
+        </table>
+    </div>
+    <br>
+    </div>-->
+    <br>
     
-
-<tr>
-    <td>HOLDINGS BY PROMOTERS</td>
-    <td>{{HOLDINGSBYPROMOTERSINMINESTWO}}</td>
-    <td>{{HOLDINGSBYPROMOTERSINMINESONE}}</td>
-    <td>{{HOLDINGSBYPROMOTERSINZERO}}</td>
-</tr>
-<tr>
-    <td>HOLDING BY FII</td>
-    <td>{{HOLDINGBYFIIINMINESTWO}}</td>
-    <td>{{HOLDINGBYFIIINMINESONE}}</td>
-    <td>{{HOLDINGBYFIIINZERO}}</td>
-</tr>
-<tr>
-    <td>HOLDING BY DII</td>
-    <td>{{HOLDINGBYDIIMINESTWO}}</td>
-    <td>{{HOLDINGBYDIIMINESONE}}</td>
-    <td>{{HOLDINGBYDIIZERO}}</td>
-</tr>
-<tr>
-    <td>HOLDINGS BY PUBLIC</td>
-    <td>{{HOLDINGSBYPUBLICINMINESTWO}}</td>
-    <td>{{HOLDINGSBYPUBLICINMINESONE}}</td>
-    <td>{{HOLDINGSBYPUBLICINZERO}}</td>
-</tr></div></td>
-<td  class="w3-card" >
-    <div style="display: flex; margin: 90px auto 40px auto;">
-        <div style=" margin:auto;">
-            <h6 style="text-align: center;  ">TAKEAWAYS FOR CHANGES IN HOLDING PATTERNS</h6> 
-            <p style="text-align: center; ">{{TAKEAWAYSFORCHNAGESINHOLDINGPATTERNS}}</p> 
+    <br>
+    
+    <!--------------------------------------------------------------------------------------------------------------------->
+    <!--<div class="" style="background-color: white;"><br>
+        <div class="w3-card" style="margin: 20px;">
+            <table class="w3-table" style="table-layout: fixed;">
+                <tbody>
+                    <tr>
+                        <td style="border-width: 0px; text-align: center;">
+                            <h6>EPS IN 2019</h6>{{EPSINMINESTWO}}
+                            <h6>EPS IN 2020</h6>{{EPSINMINESONE}}
+                            <h6>EPS IN 2021</h6>{{EPSINZERO}}
+                        </td>
+                        <div  style="display: flex; margin: 40px auto 40px auto;">
+                            <td style="border-width: 0px; text-align: center;"> <h6>TAKEAWAY ON EPS</h6>{{TAKEAWAYONEPS}}</td>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>-->
+    
+    
+    <!---------------------------------------------------------------------------------------------------------------------------------->
+    <div class="" style="background-color: white;"><br>
+        <div class="w3-card" style="margin: 20px;">
+            <table class="w3-table" style="table-layout: fixed;">
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"></td>
+                        <td style="text-align: center; border-width: 0px;"><h6>Compounded sales Growth</h6></td>
+                        <td style="text-align: center; border-width: 0px;"><h6>Compounded Profit Growth</h6></td>
+                        <td style="text-align: center; border-width: 0px;"><h6>Stock Price CAGR</h6></td>
+                        <td style="text-align: center; border-width: 0px;"><h6>Return on Equity</h6></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"><h6>1 year</h6></td>
+                        <td style="text-align: center; border-width: 0px;">{{CompoundedSalesGrowthONEyear}}</td>
+                        <td style="text-align: center; border-width: 0px;">{{CompoundedProfitGrowthforONEYear}}</td>
+                        <td style="text-align: center; border-width: 0px;">{{StockPriceCAGRForoneyear}}</td>
+                        <td style="text-align: center; border-width: 0px;">{{ReturnonEquityForoneYear}}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"><h6>2 years</h6></td>
+                        <td style="text-align: center; border-width: 0px;">{{CompoundedSalesGrowthTWOyears}}</td>
+                        <td style="text-align: center; border-width: 0px;">{{CompoundedProfitGrowthfortwoYears}}</td>
+                        <td style="text-align: center; border-width: 0px;">{{StockPriceCAGRFortwoyears}}</td>
+                        <td style="text-align: center; border-width: 0px;">{{ReturnonEquityFortwoYears}}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"><h6>3 years</h6></td>
+                        <td style="text-align: center; border-width: 0px;">{{CompoundedSalesGrowthTHREEyears}}</td>
+                        <td style="text-align: center; border-width: 0px;">{{CompoundedProfitGrowthforthreeYear}}</td>
+                        <td style="text-align: center; border-width: 0px;">{{StockPriceCAGRForthreeyear}}</td>
+                        <td style="text-align: center; border-width: 0px;">{{ReturnonEquityForthreeYears}}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"></td>
+                        <td style="text-align: center; border-width: 0px;"><h6>TAKEAWAY FROM Compounded Sales Growth</h6>{{TAKEAWAYonCompoundedSalesGrowth}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>Takeaway from Compounded Profit Growth</h6>{{TAKEAWAYonCompoundedProfitGrowth}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>takeaway from Stock CAGR</h6>{{TAKEAWAYonStockPriceCAGR}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>Takeaway from Return on Equity</h6>{{TAKEAWAYOnReturnonEquity}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br>
+        
+        
+    </div>
+    
+            
+    <br><br>
+    
+    
+    <!------------------------------------------------------------------------------------------------------->
+    <div style="background-color: white; margin: 20px;"><br>
+        <div>
+            <table class="w3-table" style="table-layout: fixed; text-align: center;">
+                <tbody>
+                    <tr>
+                        <td  class="w3-card" >
+                    <div   style="column-gap: 50px;">
+                        
+                            <tr>
+                                <td style="width: 25%;"></td>
+                                <td>2019</td>
+                                <td>2020</td>
+                                <td>2021</td>
+                            </tr>
+                        
+                    
+                    <tr>
+                        <td>SHARE CAPITAL</td>
+                        <td>{{SHARECAPITALINMINESTWO}}</td>
+                        <td>{{SHARECAPITALINMINESONE}}</td>
+                        <td>{{SHARECAPITALINZERO}}</td>
+                    </tr>
+                    <tr>
+                        <td>RESERVES</td>
+                        <td>{{RESERVESINMINESTWO}}</td>
+                        <td>{{RESERVESINMINESONE}}</td>
+                        <td>{{RESERVESINZERO}}</td>
+                    </tr>
+                    <tr>
+                        <td>LIABILITIES</td>
+                        <td>{{LIABILITIESINMINESTWO}}</td>
+                        <td>{{LIABILITIESINMINESONE}}</td>
+                        <td>{{LIABILITIESINZERO}}</td>
+                    </tr>
+                    <tr>
+                        <td>ASSETS</td>
+                        <td>{{ASSETSINMINESTWO}}</td>
+                        <td>{{ASSESTSINMINESONE}}</td>
+                        <td>{{ASSESTSINZERO}}</td>
+                    </tr></div></td>
+                    <td  class="w3-card">
+                        <div  style="display: flex; margin: 80px auto 40px auto;">
+                            <div style="margin: auto;">
+                                <h6 style="text-align: center;">TAKEAWAYS FOR CHANGES IN 3 YEARS BALANCE SHEET</h6> 
+                                <p style="text-align: center;">{{TAKEAWAYSFORCHANGESINTHREEYEARSBALANCESHEET}}</p> 
+                            </div>
+                            
+                       
+                    </div></td>
+                </tr>
+    
+                    <!--
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"><h6>SHARE CAPITAL IN 2019</h6></td>
+                        <td style="text-align: center; border-width: 0px;"><h6>RESERVES IN 2019</h6>{{RESERVESINMINESTWO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>LIABILITIES IN 2019</h6>{{LIABILITIESINMINESTWO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>ASSETS IN 2019</h6>{{ASSETSINMINESTWO}}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"><h6>SHARE CAPITAL IN 2020</h6>{{SHARECAPITALINMINESONE}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>RESERVES IN 2020</h6>{{RESERVESINMINESONE}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>LIABILITIES IN 2020</h6>{{LIABILITIESINMINESONE}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>ASSETS IN 2020</h6>{{ASSESTSINMINESONE}}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"><h6 >SHARE CAPITAL IN 2021</h6>{{SHARECAPITALINZERO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>RESERVES IN 2021</h6>{{RESERVESINZERO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>LIABILITIES IN 2021</h6>{{LIABILITIESINZERO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>ASSETS IN 2021</h6>{{ASSESTSINZERO}}</td>
+                    </tr>-->
+                   
+                </tbody>
+            </table>
+           <!-- <table class="w3-table">
+                <tbody>
+                    <tr>
+                        <h6 style="text-align: center;">TAKEAWAYS FOR CHANGES IN 3 YEARS BALANCE SHEET</h6> 
+                        <p style="text-align: center;">{{TAKEAWAYSFORCHANGESINTHREEYEARSBALANCESHEET}}</p> 
+                    </tr>
+                </tbody>
+            </table>-->
+        </div>
+        <!--<div class="w3-card w3-col m6">
+            <table class="w3-table">
+                <tbody>
+                    <tr>
+                        <h6 style="text-align: center;">TAKEAWAYS FOR CHANGES IN 3 YEARS BALANCE SHEET</h6> 
+                        <p style="text-align: center;">{{TAKEAWAYSFORCHANGESINTHREEYEARSBALANCESHEET}}</p> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>-->
+        <br>  
+    </div>
+    <br>
+    
+    <br>
+    
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <div style="background-color: white; margin: 20px;"><br>
+        <div>
+            <table class="w3-table" style="table-layout: fixed; text-align: center;">
+                <tbody>
+    <tr>
+        <td  class="w3-card" >
+    <div   style="column-gap: 50px;">
+        
+            <tr>
+                <td style="width: 25%;"></td>
+                <td>2019</td>
+                <td>2020</td>
+                <td>2021</td>
+            </tr>
+        
+    
+    <tr>
+        <td>HOLDINGS BY PROMOTERS</td>
+        <td>{{HOLDINGSBYPROMOTERSINMINESTWO}}</td>
+        <td>{{HOLDINGSBYPROMOTERSINMINESONE}}</td>
+        <td>{{HOLDINGSBYPROMOTERSINZERO}}</td>
+    </tr>
+    <tr>
+        <td>HOLDING BY FII</td>
+        <td>{{HOLDINGBYFIIINMINESTWO}}</td>
+        <td>{{HOLDINGBYFIIINMINESONE}}</td>
+        <td>{{HOLDINGBYFIIINZERO}}</td>
+    </tr>
+    <tr>
+        <td>HOLDING BY DII</td>
+        <td>{{HOLDINGBYDIIMINESTWO}}</td>
+        <td>{{HOLDINGBYDIIMINESONE}}</td>
+        <td>{{HOLDINGBYDIIZERO}}</td>
+    </tr>
+    <tr>
+        <td>HOLDINGS BY PUBLIC</td>
+        <td>{{HOLDINGSBYPUBLICINMINESTWO}}</td>
+        <td>{{HOLDINGSBYPUBLICINMINESONE}}</td>
+        <td>{{HOLDINGSBYPUBLICINZERO}}</td>
+    </tr></div></td>
+    <td  class="w3-card" >
+        <div style="display: flex; margin: 90px auto 40px auto;">
+            <div style=" margin:auto;">
+                <h6 style="text-align: center;  ">TAKEAWAYS FOR CHANGES IN HOLDING PATTERNS</h6> 
+                <p style="text-align: center; ">{{TAKEAWAYSFORCHNAGESINHOLDINGPATTERNS}}</p> 
+            </div>
+            
+       
+    </div></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <br>  
+    </div>
+    <br>
+    
+    <br>
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+    <!--<div class="" style="background-color: white;"><br>
+        <div class="w3-card" style="margin: 20px;">
+            <table class="w3-table" style="table-layout: fixed;">
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"><h6>HOLDINGS BY PROMOTERS IN 2019</h6>{{HOLDINGSBYPROMOTERSINMINESTWO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6  >HOLDING BY FII IN 2019</h6>{{HOLDINGBYFIIINMINESTWO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6  >HOLDING BY DII 2019</h6>{{HOLDINGBYDIIMINESTWO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6 >HOLDINGS BY PUBLIC IN 2019</h6>{{HOLDINGSBYPUBLICINMINESTWO}}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"><h6 >HOLDINGS BY PROMOTERS IN 2020</h6>{{HOLDINGSBYPROMOTERSINMINESONE}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6 >HOLDING BY FII IN 2020</h6>{{HOLDINGBYFIIINMINESONE}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6 >HOLDING BY DII 2020</h6>{{HOLDINGBYDIIMINESONE}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6  >HOLDINGS BY PUBLIC IN 2019</h6>{{HOLDINGSBYPUBLICINMINESONE}}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; border-width: 0px;"><h6  >HOLDINGS BY PROMOTERS IN 2021</h6>{{HOLDINGSBYPROMOTERSINZERO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6 >HOLDING BY FII IN 2021</h6>{{HOLDINGBYFIIINZERO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6 >HOLDING BY DII 2021</h6>{{HOLDINGBYDIIZERO}}</td>
+                        <td style="text-align: center; border-width: 0px;"><h6>HOLDINGS BY PUBLIC IN 2021</h6>{{HOLDINGSBYPUBLICINZERO}}</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+            <table class="w3-table">
+                <tbody>
+                    <tr>
+                        <h6 style="text-align: center;">TAKEAWAYS FOR CHANGES IN HOLDING PATTERNS</h6> <p style="text-align: center;">{{TAKEAWAYSFORCHNAGESINHOLDINGPATTERNS}}</p> 
+                    </tr>
+                </tbody>
+            </table>
+        </div><br>
+        
+        
+    </div>-->
+    
+    <br><br><br>
+    
+    <!----------------------------------------------FOOTER------------------------------------------------------------------------------->
+    <div style="background: rgb(226, 229, 229);"><br>
+        <div style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
+            <div class="w3-col m3" >
+                <div>
+                    <a href="">Disclaimer</a><br>
+                    <a href="">Privacy Policy</a><br>
+                    <a href="">T & C</a>
+                    
+                   
+                </div>
+            </div>
+            <div class="w3-col m3">
+                <h6>Associated by collabgenics</h6>
+                <a href="https://collabgenics.in/">
+                <span><img src="https://collabgenics.in/wp-content/uploads/2019/03/collabgenics.png" style="height: 50px; width: 70px;" alt=""></span>
+                </a>    
+            </div>
+            <div class="w3-col m3" >
+                <div  >
+                    <h6 style="text-align: center;">Raise Ticket</h6>
+                    <h6 style="text-align: center;"><span><a href="#">clinet.collbgenics.in</a></span></h6> 
+                </div>
+            </div>
+            <div class="w3-col m3" style="text-align:center;">
+                <div style="margin-left: 20%;">
+                    <h6>Reach us <span><a href="#">Equity@collabgenics</a></span></h6>
+                    <a href="https://www.facebook.com/collabgenics" 
+                    class="fa fa-facebook" 
+                    style=" background: #3B5998; color: white; border-radius: 20%;"></a>
+                    <a href="https://www.instagram.com/collabgenics" 
+                    class="fa fa-instagram  " 
+                    style=" background: #125688; color: white; border-radius: 20%;"></a>
+                    <a href="https://twitter.com/collabgenics" 
+                    class="fa fa-twitter " 
+                    style=" background: #55ACEE; color: white; border-radius: 20%;"></a>
+                    <a href="https://www.youtube.com/channel/UCdZ7sz4SEtArXRZa8rAOoog" 
+                    class="fa fa-youtube " 
+                    style=" background: #bb0000; color: white; border-radius: 20%;"></a>
+                    
+                </div>
+            </div>
+            
+        </div><br>
+    
+        <div class="w3-row"  style="text-align: center;">
+            
+            <div class="w3-col m6">
+                
+                <h6 style="text-align: right;">Copyright © 2020 Collab Capital. All Rights Reserved</h6>
+                
+            </div>
+            <div class="w3-col m6" style="text-align: left; padding-left: 5%;">
+                <h6 style="text-align: center;">Powered by <span><a href="http://www.smartvibes.in/index.html">Smartvibes</a></span> </h6>
+            </div>
         </div>
         
-   
-</div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<br>  
-</div>
-<br>
-
-<br>
-<!-------------------------------------------------------------------------------------------------------------------------------->
-<!--<div class="" style="background-color: white;"><br>
-    <div class="w3-card" style="margin: 20px;">
-        <table class="w3-table" style="table-layout: fixed;">
-            <tbody>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"><h6>HOLDINGS BY PROMOTERS IN 2019</h6>{{HOLDINGSBYPROMOTERSINMINESTWO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6  >HOLDING BY FII IN 2019</h6>{{HOLDINGBYFIIINMINESTWO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6  >HOLDING BY DII 2019</h6>{{HOLDINGBYDIIMINESTWO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6 >HOLDINGS BY PUBLIC IN 2019</h6>{{HOLDINGSBYPUBLICINMINESTWO}}</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"><h6 >HOLDINGS BY PROMOTERS IN 2020</h6>{{HOLDINGSBYPROMOTERSINMINESONE}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6 >HOLDING BY FII IN 2020</h6>{{HOLDINGBYFIIINMINESONE}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6 >HOLDING BY DII 2020</h6>{{HOLDINGBYDIIMINESONE}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6  >HOLDINGS BY PUBLIC IN 2019</h6>{{HOLDINGSBYPUBLICINMINESONE}}</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; border-width: 0px;"><h6  >HOLDINGS BY PROMOTERS IN 2021</h6>{{HOLDINGSBYPROMOTERSINZERO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6 >HOLDING BY FII IN 2021</h6>{{HOLDINGBYFIIINZERO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6 >HOLDING BY DII 2021</h6>{{HOLDINGBYDIIZERO}}</td>
-                    <td style="text-align: center; border-width: 0px;"><h6>HOLDINGS BY PUBLIC IN 2021</h6>{{HOLDINGSBYPUBLICINZERO}}</td>
-                </tr>
-               
-            </tbody>
-        </table>
-        <table class="w3-table">
-            <tbody>
-                <tr>
-                    <h6 style="text-align: center;">TAKEAWAYS FOR CHANGES IN HOLDING PATTERNS</h6> <p style="text-align: center;">{{TAKEAWAYSFORCHNAGESINHOLDINGPATTERNS}}</p> 
-                </tr>
-            </tbody>
-        </table>
-    </div><br>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------------->
     
     
-</div>-->
-
-<br><br><br>
-
-
-</div>
-
- 
+    </div>
+    
+     

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CrudService } from 'src/app/shared/crud.service';
 import { AddUserComponent } from '../add-user.component';
 import { Student } from 'src/app/shared/student';
+import { filter } from 'rxjs/operators'
 import { count } from 'rxjs/operators';
 
 @Component({
@@ -11,6 +12,13 @@ import { count } from 'rxjs/operators';
   styleUrls: ['./company.component.css']
 })
 export class CompanyComponent implements OnInit {
+  count!: number;
+  sorrys:boolean = false;
+  back:boolean = false;
+  sorry: Boolean = false;
+  tou: boolean = false;
+  val : any;
+  filterTerm!: string;
   HOWBUSINESSISPERFORMAINGWHENCOMPARINGTOOTHERCOMPANIESINSAMEINDUSTRY:any;
   LASTSIXMONTHSWORKPROFILE:any;
   BSECODE:any;
@@ -21,7 +29,7 @@ export class CompanyComponent implements OnInit {
   Student!: Student[];
  companyName:any = 0;
  snapshotPageNo:any = 0;
-  filterTerm!: string;
+  filterTer!: string;
   json!: [];
   emp! : string;
   ABOUTCOMPANY!: string;
@@ -161,9 +169,91 @@ export class CompanyComponent implements OnInit {
       }*/
      
     });
+    this.user(this.data);
 
     
   }
+
+  /*-----------------------------------------*/
+  user(data:any) {
+
+   
+    this.crudService.addUser(this.userObj).subscribe((data: {}) => {
+      this.JsonData = JSON.parse(JSON.stringify(data)).jsonData;
+     /*
+        if(this.filterTerm != this.JsonData[this.i].NameoftheCompnay ){
+          this.sorry = false;
+        }
+        else
+        {
+          this.sorry = false;
+        } 
+        */
+      
+      
+     
+     /* for(this.i=0; this.i<=this.JsonData.length; this.i++){
+        if(this.JsonData[this.i].NameoftheCompnay){
+          this.sorry = true;
+         console.log(this.JsonData[this.i].NameoftheCompnay)
+        }
+      }*/
+
+      /*console.log(JSON.parse(JSON.stringify(data)).jsonData[0].NameoftheCompnay)
+      console.log(JSON.parse(JSON.stringify(data)).jsonData)
+      this.d = this.data;
+      console.log(data);
+      console.log(typeof(this.d))*/
+      
+
+    })
+  }
+  /*----------------------------------------------*/
+
+  detect(event: any): void{
+    if(event.target.value.length > 2){
+      this.back = true;
+      this.sorrys =true;
+    }
+    else {
+      this.sorry = false;
+      this.back = false;
+      this.sorrys = false;
+    }
+    /*console.log(event.target.value.length)*/
+  }
+
+showing(event: any){
+  
+  if(event){
+    this.sorry = true;
+  }
+    else{
+      this.sorry = false;
+    }
+  
+
+ 
+}
+
+search(localRef: HTMLInputElement){
+   
+   /* console.log(localRef.eventListeners)
+     console.log(localRef)
+     console.log(localRef.value.length)*/
+     if(localRef.value.length > 1) {
+       this.tou = true;
+     }
+  }
+
+func(event: any){
+  this.val = event.target.value
+   
+  
+}	
+onKeyPress(){
+  this.count = this.count + 1;
+}
 
   
 
