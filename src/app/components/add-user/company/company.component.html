@@ -552,11 +552,11 @@
     <!----------------------------------------------------------------------------------------------------------------------->
     <div style=" margin:0 auto;display: flex;"><br>
         <div>
-            <table class="w3-table" style="text-align: center; ">
+            <table class="w3-table" style="text-align: center; table-layout: fixed; ">
                 <!---removed t-layout : fixed;-->
                 <tbody>
     
-                    <tr>
+                    <tr style="table-layout: fixed;">
                         <td class="w3-card">
                             <div style="column-gap: 50px;">
     
@@ -594,60 +594,48 @@
     
             </div>
         </td>
+        <td class="w3-card">
+        <div style="column-gap: 50px;">
+    
+            <tr>
+                <td style="width: 25%;"></td>
+                <td style="width: 25%;">EPS</td>
+    
+            </tr>
+            <tr>
+                <td>2019</td>
+                <td>{{EPSINMINESTWO}}</td>
+    
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>{{EPSINMINESONE}}</td>
+    
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>{{EPSINZERO}}</td>
+    
+            </tr>
+    
+    
+        </div></td>
+        <td class="w3-card">
+            <div style="display: flex; margin: 70px auto 40px auto;">
+                <div style="margin: auto;">
+                    <h6 style="text-align: center;">TAKEAWAY ON EPS</h6>
+                    <p style="text-align: center;">{{TAKEAWAYONEPS}}</p>
+                </div>
+    
+    
+            </div>
+        </td>
         </tr>
         </tbody>
         </table>
     </div>
     <!--------------------------------------->
-    <div >
-        <table class="w3-table" style="text-align: center; ">
-            <!---removed text-layout : fixed;-->
-            <tbody>
-    
-                <tr>
-                    <td class="w3-card">
-                        <div style="column-gap: 50px;">
-    
-                <tr>
-                    <td style="width: 25%;"></td>
-                    <td style="width: 25%;">EPS</td>
-    
-                </tr>
-                <tr>
-                    <td>2019</td>
-                    <td>{{EPSINMINESTWO}}</td>
-    
-                </tr>
-                <tr>
-                    <td>2020</td>
-                    <td>{{EPSINMINESONE}}</td>
-    
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>{{EPSINZERO}}</td>
-    
-                </tr>
-    
-    
-    </div>
-    </td>
-    <td class="w3-card">
-        <div style="display: flex; margin: 70px auto 40px auto;">
-            <div style="margin: auto;">
-                <h6 style="text-align: center;">TAKEAWAY ON EPS</h6>
-                <p style="text-align: center;">{{TAKEAWAYONEPS}}</p>
-            </div>
-    
-    
-        </div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <!------------------------------------->
-    
-    </div>
+
     <br>
     </div>
     <br>
@@ -919,7 +907,7 @@
     <div   style="column-gap: 50px;">
         
             <tr>
-                <td style="width: 25%;"></td>
+                <td style="width: 25%;">HOLDINGS</td>
                 <td>2019</td>
                 <td>2020</td>
                 <td>2021</td>
@@ -927,25 +915,25 @@
         
     
     <tr>
-        <td>HOLDINGS BY PROMOTERS</td>
+        <td>BY PROMOTERS</td>
         <td>{{HOLDINGSBYPROMOTERSINMINESTWO}}</td>
         <td>{{HOLDINGSBYPROMOTERSINMINESONE}}</td>
         <td>{{HOLDINGSBYPROMOTERSINZERO}}</td>
     </tr>
     <tr>
-        <td>HOLDING BY FII</td>
+        <td>BY FII</td>
         <td>{{HOLDINGBYFIIINMINESTWO}}</td>
         <td>{{HOLDINGBYFIIINMINESONE}}</td>
         <td>{{HOLDINGBYFIIINZERO}}</td>
     </tr>
     <tr>
-        <td>HOLDING BY DII</td>
+        <td>BY DII</td>
         <td>{{HOLDINGBYDIIMINESTWO}}</td>
         <td>{{HOLDINGBYDIIMINESONE}}</td>
         <td>{{HOLDINGBYDIIZERO}}</td>
     </tr>
     <tr>
-        <td>HOLDINGS BY PUBLIC</td>
+        <td>BY PUBLIC</td>
         <td>{{HOLDINGSBYPUBLICINMINESTWO}}</td>
         <td>{{HOLDINGSBYPUBLICINMINESONE}}</td>
         <td>{{HOLDINGSBYPUBLICINZERO}}</td>

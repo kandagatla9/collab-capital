@@ -1,11 +1,15 @@
+
 <!--ng-keydown="count = count + 1"   (change)    
     (ngsubmit)="showing()"
     (onSubmit)="showing()"-->
-    <div class="container" style="max-width: 500px; margin-top: 120px;">
-      <h3 class="mb-3 mt-5 text-center"> </h3>
-    <img src="../../../assets/capital .png" alt="" style="height: 200px; width: 200px;margin-left: 25%;">
+    <div class="w3-row">
+     
+    
+    <div  class="w3-col m9" >
+
+      <img src="../../../assets/capital .png" alt="" style="height: 200px; width: 200px; margin-left: 55%; margin-top: 10%;">
     <br><br>
-      <div >
+      <div style="width: 477px; margin-left: 45%;">
        
         <input 
         (input)="detect($event)"
@@ -78,7 +82,10 @@
       </table> 
      <!--   {{emp}} --> 
       <!----------------------------------------------------------------->
-    
+      <div *ngIf="sorry && sorrys" style="margin-left: 45%; width: 477px;">
+        <h3 style="text-align: center;">we are Sorry!!!</h3>
+        <p style="text-align: center;">No Related company found, Do write us at <a href="">equity@collabcapital.in</a> we will Update. Our next user can enjoy the data.</p>
+      </div>
     
      <!-- <div class="form-group">
         <input type="text" [(ngModel)]="userObj.email" class="form-control" placeholder="Email">
@@ -87,15 +94,16 @@
       <div class="form-group">
         <input type="text" [(ngModel)]="userObj.phone" class="form-control" placeholder="Phone">
       </div>-->
-    
-      <div class="form-group">
+    </div>
+      <!--<div class="form-group">-->
       <!--<button class="btn btn-success btn-lg btn-block" (click)="addUser(userObj)"> </button>-->
-      </div>
+      <!--</div>-->
     <!----------------------------------------------->
-      <div *ngIf="sorry && sorrys">
-        <h3 style="text-align: center;">we are Sorry!!!</h3>
-        <p style="text-align: center;">No Related company found, Do write us at <a href="">equity@collabcapital.in</a> we will Update. Our next user can enjoy the data.</p>
-      </div>
+      
+    <!------------------------------------------------------------------------>
+    <div class="w3-col m3" style="text-align:center; margin-top: 40%">
+      <h6 >Powered by <a href="http://www.smartvibes.in/index.html">Smartvibes</a> </h6>
+    </div>
     <!------------------------------------------------------------------------>
     </div>
     
