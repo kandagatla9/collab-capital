@@ -154,10 +154,10 @@ export class CompanyComponent implements OnInit {
   this.crudService.getSingleUser(id).subscribe();
    
   this.addUser(this.data)
-    this.snapshotPageNo = this.Activatedroute.snapshot.queryParamMap.get('q')||0;
+    this.snapshotPageNo = this.Activatedroute.snapshot.queryParamMap.get('user')||0;
     this.Activatedroute.queryParamMap
     .subscribe(params => {
-      this.companyName = params.get('q')||0;
+      this.companyName = params.get('user')||0;
      /* console.log('Query params', this.companyName)
       console.log(this.snapshotPageNo) */
       /*

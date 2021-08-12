@@ -123,9 +123,9 @@
             
                            <li 
                            #reff [routerLink]="['../../add/company']"  
-                           onClick="window.location.reload();" [queryParams]="{ q: user.NameoftheCompnay}" >
+                           onClick="window.location.reload();" [queryParams]="{ user: user.NameoftheCompnay}" >
                            <span>  
-                             <a [routerLink]="['../../add/company']"  [queryParams]="{ q: user.NameoftheCompnay}" 
+                             <a [routerLink]="['../../add/company']"  [queryParams]="{ user: user.NameoftheCompnay}" 
                              
                              style="text-decoration: none;color: black;" href="">{{ user.NameoftheCompnay }}  </a>
                            </span>

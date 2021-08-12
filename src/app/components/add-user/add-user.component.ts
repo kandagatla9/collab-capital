@@ -10,6 +10,9 @@ import { CrudService } from "../../shared/crud.service";
 })
 
 export class AddUserComponent implements OnInit {
+  NameoftheCompnay!: string;
+  length!: number;
+  user:any;
   sorrys:boolean = false;
   back:boolean=false;
   reflect:any;
@@ -41,14 +44,20 @@ export class AddUserComponent implements OnInit {
 
   }
 
-  showing(event: any){
-    
-    if(event){
-      this.sorry = true;
-    }
-      else{
-        this.sorry = false;
+  showing(user: any){
+   
+    for(this.i=0; this.i<=this.JsonData.length; this.i++){
+      if( this.user === this.JsonData[this.i].NameoftheCompnay ){
+       
+        this.router.navigate(['/add/company'], { queryParams: { user }, queryParamsHandling: 'merge' });
       }
+      else{
+        this.sorry = true;
+      }
+      
+    }
+    
+      
     
   
    

@@ -1,4 +1,4 @@
-
+<div class="gcse-searchresults-only"></div>
 <!--ng-keydown="count = count + 1"   (change)    
     (ngsubmit)="showing()"
     (onSubmit)="showing()"-->
@@ -7,11 +7,32 @@
     
     <div  class="w3-col m9" >
 
-      <img src="../../../assets/capital .png" alt="" style="height: 200px; width: 200px; margin-left: 55%; margin-top: 10%;">
+      <img src="../../../assets/capital .png" alt="" 
+      style="height: 200px; width: 200px; margin-left: 55%; margin-top: 10%;">
     <br><br>
-      <div style="width: 477px; margin-left: 45%;">
-       
-        <input 
+      <div style=" margin-left: 45%;width: 477px;">
+        <input  
+        style="border-width: 3px;width: 450px;"
+        class="form-control"
+        #localRef
+        (keypress)="func($event)"
+        ng-keydown="search(localRef)"
+        (input)="detect($event)"
+        (keyup.enter)="showing(user)" list="user"  
+        placeholder="Please Enter Company Name"
+        [(ngModel)]="user"/>
+        
+        <datalist id="user" *ngIf="back" style="width: 100%;"> 
+          <option *ngFor="let user of JsonData" style="width: 100%;"> 
+            <a [routerLink]="['/add/company']" 
+            [queryParams]="{ q: user.NameoftheCompnay}"> 
+             {{user.NameoftheCompnay}} </a>
+          </option>
+        </datalist>
+      </div>
+
+
+        <!--<input 
         (input)="detect($event)"
         (keyup.enter)="showing($event)"
         type="submit"
@@ -34,7 +55,7 @@
     
     
     
-    <table class=" table table-bordered" *ngIf="back"> <!---->
+    <table class=" table table-bordered" *ngIf="back"> -->
        <!-- <thead>
           <tr> -->
             <!--<th scope="col">#Id</th>-->
@@ -44,7 +65,7 @@
             <th scope="col">Action</th>-->
            <!--</tr>
         </thead>-->
-        <tbody> 
+        <!--<tbody> 
          <div style="
          text-decoration: none;
          height:200px;
@@ -60,15 +81,15 @@
                             <a [routerLink]="['/add/company']"  [queryParams]="{ q: user.NameoftheCompnay}" 
                             style="text-decoration: none;color: black;" href="">{{ user.NameoftheCompnay }}  </a>
                           </span>
-                        </li> 
+                        </li>--> 
                               
                         <!--  <td>
                             <span class="edit btn-danger btn-sm btn" (click)="delete(user.id)">Delete</span> &nbsp;
                             <span class="edit btn-success btn-sm btn" routerLink="/edit/{{user.id}}">Edit</span>
                           </td>-->
-                        </ul></span> 
+                        <!--</ul></span> 
     
-                     </div>
+                     </div>-->
          <!--.slice(0, 5)-->
             
           
@@ -79,8 +100,8 @@
     
      
     
-        </tbody>
-      </table> 
+        <!--</tbody>
+      </table>-->
      <!--   {{emp}} --> 
       <!----------------------------------------------------------------->
       <div *ngIf="sorry && sorrys" style="margin-left: 45%; width: 477px;">
