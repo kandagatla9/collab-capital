@@ -164,7 +164,7 @@ export class CompanyComponent implements OnInit {
     //hideloader() is called
     this.seconds = 0;
     this.timer = setInterval(() =>{
-      if (this.seconds > 7) {
+      if (this.seconds > 9) {
         hideloader();
         this.s=false;
         this.m=true
