@@ -11,6 +11,7 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CompanyComponent } from './components/add-user/company/company.component';
 import { CrudService } from './shared/crud.service';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CrudService } from './shared/crud.service';
     AddUserComponent,
     EditUserComponent,
     UsersListComponent,
-    CompanyComponent
+    CompanyComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

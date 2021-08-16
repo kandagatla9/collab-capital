@@ -69,7 +69,7 @@
     
     
     
-    <div style="background-color: white;">
+    <div style="background-color: #F1F4F8;">
     
     
     
@@ -100,7 +100,7 @@
             </div>
               
           </nav> 
-          <br><br><br>
+          <br style="background-color: #F1F4F8;"><br style="background-color: #F1F4F8;"><br style="background-color: #F1F4F8;">
           <!------------------------------------------------------------>
     <table class=" table table-bordered" *ngIf="back" style="margin-left: 80%;background-color: white; position: fixed;"> <!---->
         <!-- <thead>
@@ -151,7 +151,7 @@
          </tbody>
        </table>
      <!-------------------------------------------------------------------->
-    <br> 
+    <br style="background-color: #F1F4F8;"> 
     <!--
     <div style="height:120px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
         As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
@@ -159,8 +159,13 @@
     
     
     <!-------------------------------------------------------------------------------------------------------------------->
-    <br><br>
-    
+    <br style="background-color: #F1F4F8;"><br style="background-color: #F1F4F8;">
+    <div *ngIf="s" class="d-flex justify-content-center" style="background-color: #F1F4F8;">
+        <div class="spinner-border" role="status" >
+          <span class="sr-only" id="loading"></span>
+        </div>
+      </div>
+      <div *ngIf="m" style="background-color: #F1F4F8;">
         <div class="" style="height: 100%; background-color: white;"><br>
             <div class="w3-row " style="margin: 20px; height: 100%;">
                 <div class="w3-col m9" style="flex: auto;">
@@ -216,6 +221,7 @@
     <!------------------------------------------------------------------------------------------------------------------------------->
         
     <br><br>
+    
         <div class="" style="height: 100%; background-color: white;"><br>
             <div class=" w3-row" style="margin: 20px;">
                 <div  >
@@ -995,7 +1001,7 @@
     </div>-->
     
     <br><br><br>
-    
+   
     <!----------------------------------------------FOOTER--- large screen---------------------------------------------------------------------------->
     <div class="w3-hide-small" style="background: rgb(226, 229, 229);"><br>
         <div class="w3-row" style=" max-width: 1170px; width:100%; margin:0 auto;display: flex;">
@@ -1115,6 +1121,7 @@
         
     </div>
     <!---------------------------------------------------------------------------------------------------------------------------------->
-    </div>
+</div>     
+</div>
     
      

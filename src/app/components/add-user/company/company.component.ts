@@ -5,6 +5,7 @@ import { AddUserComponent } from '../add-user.component';
 import { Student } from 'src/app/shared/student';
 import { filter } from 'rxjs/operators'
 import { count } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-company',
@@ -12,6 +13,13 @@ import { count } from 'rxjs/operators';
   styleUrls: ['./company.component.css']
 })
 export class CompanyComponent implements OnInit {
+  m:boolean = false;
+  s: boolean = true;
+  seconds:number = 0;
+  timer:any;
+ 
+  dt: any;
+  dataDisplay: any;
   count!: number;
   sorrys:boolean = false;
   back:boolean = false;
@@ -122,6 +130,7 @@ export class CompanyComponent implements OnInit {
   ReturnonEquityFortwoYears: any;
   ReturnonEquityForthreeYears: any;
   constructor( 
+    private http: HttpClient,
     private Activatedroute: ActivatedRoute,
     public crudService: CrudService,
     public router: Router
@@ -149,6 +158,31 @@ export class CompanyComponent implements OnInit {
     });
   }  */
  ngOnInit(): void {  
+  this.http.get('https://collabgenics-api.herokuapp.com/api')
+  .subscribe(Response => {
+    //If Response comes function
+    //hideloader() is called
+    this.seconds = 0;
+    this.timer = setInterval(() =>{
+      if (this.seconds > 7) {
+        hideloader();
+        this.s=false;
+        this.m=true
+      }
+      this.seconds+=1;
+    }, 1000)
+  
+
+    console.log(Response)
+    this.dt = Response;
+    this.dataDisplay = this.dt.data;
+  });
+  //Function is defined
+  function hideloader() {
+    //setting display of spinner
+    // element to none
+    (<HTMLInputElement>document.getElementById('loading')).style.display = 'none';
+  }
    
   const id = this.Activatedroute.snapshot.paramMap.get('id');
   this.crudService.getSingleUser(id).subscribe();
